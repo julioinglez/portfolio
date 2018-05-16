@@ -1,0 +1,48 @@
+// Application SASS Variables
+
+$black: #000;
+$black-l: #0C0C0C;
+$white: #fff;
+
+$blue: #5F86FF;
+$aqua: #20E1FF;
+$orange: #FFC442;
+
+// Grays
+$gray-x-x-x-x-x-l: #FCFCFC;
+$gray-x-x-x-x-l: #F6F6F6;
+$gray-x-x-x-l: #F4F4F4;
+$gray-x-x-l: #EDEDED;
+$gray-x-l: #E2E2E2;
+$gray-l: #D6D6D6;
+$gray: #C9C9C9;
+$gray-d: #AAAAAA;
+$gray-x-d: #8F8F8F;
+$gray-x-x-d: #4A4A4A;
+$gray-x-x-x-d: #353535;
+$gray-x-x-x-x-d: #1E1E1E;
+
+
+// Project Colors
+
+$fnf-primary-x-x-d: #2B4468;
+$fnf-primary-x-x-x-x-x-l: lighten($fnf-primary-x-x-d, 66%) !default;
+$fnf-primary-x-x-x-x-l: lighten($fnf-primary-x-x-d, 63%) !default;
+$fnf-primary-x-x-x-l: lighten($fnf-primary-x-x-d, 52%) !default;
+$fnf-primary-x-x-l: lighten($fnf-primary-x-x-d, 41%) !default;
+$fnf-primary-x-l: lighten($fnf-primary-x-x-d, 30%) !default;
+$fnf-primary-l: lighten($fnf-primary-x-x-d, 20%) !default;
+$fnf-primary: lighten($fnf-primary-x-x-d, 15%) !default;
+$fnf-primary-d: lighten($fnf-primary-x-x-d, 10%) !default;
+$fnf-primary-x-d: lighten($fnf-primary-x-x-d, 5%) !default;
+$fnf-primary-x-x-x-d: darken($fnf-primary-x-x-d, 5%) !default;
+$fnf-primary-x-x-x-x-d: darken($fnf-primary-x-x-d, 10%) !default;
+$fnf-primary-x-x-x-x-x-d: darken($fnf-primary-x-x-d, 20%) !default;
+$fnf-secondary: #00a3d8 !default;
+$fnf-secondary-l: lighten($fnf-secondary, 5%) !default;
+$fnf-secondary-x-l: lighten($fnf-secondary, 10%) !default;
+$fnf-secondary-x-x-l: lighten($fnf-secondary, 15%) !default;
+$fnf-secondary-d: darken($fnf-secondary, 5%) !default;
+$fnf-secondary-x-d: darken($fnf-secondary, 10%) !default;
+$fnf-secondary-x-x-d: darken($fnf-secondary, 15%) !default;
+$fnf-secondary-x-x-x-d: darken($fnf-secondary, 18%) !default;

@@ -1,0 +1,112 @@
+.project-display-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 200%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: none;
+    transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+  }
+
+  &::after{
+    left: -40%;
+  }
+
+  &.formnflow{
+    $fnf-gradient-start: $fnf-primary-d;
+    $fnf-gradient-middle: $fnf-primary-x-x-x-d;
+    $fnf-gradient-end: $fnf-primary-x-x-x-x-x-d;
+
+    // $fnf-gradient-start: $fnf-secondary-x-x-d;
+    // $fnf-gradient-middle: $fnf-primary-x-x-x-d;
+    // $fnf-gradient-end: $fnf-primary-x-x-x-x-x-d;
+    background: $fnf-primary-x-x-x-x-x-d;
+    background: -moz-linear-gradient(-45deg, $fnf-gradient-start 0%, $fnf-gradient-start 14%, $fnf-gradient-middle 55%, $fnf-gradient-end 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, $fnf-gradient-start), color-stop(14%, $fnf-gradient-start), color-stop(55%, $fnf-gradient-middle), color-stop(100%, $fnf-gradient-end));
+    background: -webkit-linear-gradient(-45deg, $fnf-gradient-start 0%, $fnf-gradient-start 14%, $fnf-gradient-middle 55%, $fnf-gradient-end 100%);
+    background: -o-linear-gradient(-45deg, $fnf-gradient-start 0%, $fnf-gradient-start 14%, $fnf-gradient-middle 55%, $fnf-gradient-end 100%);
+    background: -ms-linear-gradient(-45deg, $fnf-gradient-start 0%, $fnf-gradient-start 14%, $fnf-gradient-middle 55%, $fnf-gradient-end 100%);
+    background: linear-gradient(135deg, $fnf-gradient-start 0%, $fnf-gradient-start 14%, $fnf-gradient-middle 55%, $fnf-gradient-end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fnf-gradient-start', endColorstr='$fnf-gradient-end', GradientType=1);
+
+    &::before{
+      background: linear-gradient(180deg, rgba(255,0,0,0), rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+    }
+
+    &::after{
+      background: linear-gradient(0deg, rgba(255,0,0,0), rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+    }
+  }
+
+  .project-display{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+    max-width: 1200px;
+    z-index: 1;
+    cursor: pointer;
+
+    @media only screen and (max-width : 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &:hover{}
+
+    .project-display-title{
+      position: relative;
+      width: 50%;
+      letter-spacing: 1px;
+      font-weight: 600;
+      opacity: 1;
+      font-size: 50px;
+      text-shadow: 1px 1px 5px $gray-x-x-d;
+      transition: all 0.2s ease-out;
+
+      padding-right: 30px;
+
+      @media only screen and (max-width : 768px) {
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+
+      @media only screen and (max-width : 480px) {
+        font-size: 25px;
+      }
+    }
+
+    .project-display-hero{
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: auto;
+      transition: all 0.15s ease-out;
+
+      img.project-display-hero-image{
+        width: 100%;
+        height: auto;
+        align-self: center;
+      }
+    }
+  }
+}
