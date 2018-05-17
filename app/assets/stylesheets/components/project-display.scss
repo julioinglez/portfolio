@@ -12,7 +12,7 @@
   &::after{
     content: '';
     position: absolute;
-    width: 25%;
+    width: 50%;
     height: 200%;
     left: 0;
     right: 0;
@@ -23,20 +23,34 @@
     transform: rotate(225deg);
     -ms-transform: rotate(225deg);
     -webkit-transform: rotate(225deg);
+    transition: all 0.15 ease-out;
+
+    @media only screen and (max-width : 1200px) {
+      width: 60%;
+    }
+
+    @media only screen and (max-width : 992px) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width : 768px) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width : 480px) {
+      width: 90%;
+    }
   }
 
   &::after{
-    left: -40%;
+    left: -30%;
   }
 
   &.formnflow{
-    $fnf-gradient-start: $fnf-primary-d;
+    // $fnf-gradient-start: $fnf-primary-d;
+    $fnf-gradient-start: $fnf-secondary-x-x-d;
     $fnf-gradient-middle: $fnf-primary-x-x-x-d;
     $fnf-gradient-end: $fnf-primary-x-x-x-x-x-d;
-
-    // $fnf-gradient-start: $fnf-secondary-x-x-d;
-    // $fnf-gradient-middle: $fnf-primary-x-x-x-d;
-    // $fnf-gradient-end: $fnf-primary-x-x-x-x-x-d;
     background: $fnf-primary-x-x-x-x-x-d;
     background: -moz-linear-gradient(-45deg, $fnf-gradient-start 0%, $fnf-gradient-start 14%, $fnf-gradient-middle 55%, $fnf-gradient-end 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, $fnf-gradient-start), color-stop(14%, $fnf-gradient-start), color-stop(55%, $fnf-gradient-middle), color-stop(100%, $fnf-gradient-end));
@@ -47,11 +61,11 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fnf-gradient-start', endColorstr='$fnf-gradient-end', GradientType=1);
 
     &::before{
-      background: linear-gradient(180deg, rgba(255,0,0,0), rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      background: linear-gradient(250deg, rgba(255,0,0,0), rgba(255,255,255,0.04), rgba(255,255,255,0));
     }
 
     &::after{
-      background: linear-gradient(0deg, rgba(255,0,0,0), rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      background: linear-gradient(80deg, rgba(255,0,0,0), rgba(255,255,255,0.04), rgba(255,255,255,0));
     }
   }
 
@@ -73,25 +87,65 @@
 
     &:hover{}
 
-    .project-display-title{
+    .project-display-headings{
       position: relative;
       width: 50%;
-      letter-spacing: 1px;
-      font-weight: 600;
-      opacity: 1;
-      font-size: 50px;
       text-shadow: 1px 1px 5px $gray-x-x-d;
       transition: all 0.2s ease-out;
 
       padding-right: 30px;
 
       @media only screen and (max-width : 768px) {
-        font-size: 35px;
         margin-bottom: 30px;
+        width: 100%;
       }
 
-      @media only screen and (max-width : 480px) {
-        font-size: 25px;
+      h2.project-display-title{
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 50px;
+        transition: all 0.2s ease-out;
+
+        @media only screen and (max-width : 1200px) {
+          font-size: 40px;
+        }
+
+        @media only screen and (max-width : 992px) {
+          font-size: 35px;
+        }
+
+        @media only screen and (max-width : 768px) {
+          font-size: 35px;
+        }
+
+        @media only screen and (max-width : 480px) {
+          font-size: 25px;
+        }
+      }
+
+      label.project-display-label{
+        font-size: 20px;
+        color: $fnf-secondary-x-l;
+        text-shadow: 1px 1px 2px $gray-x-x-x-d;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: all 0.2s ease-out;
+
+        @media only screen and (max-width : 1200px) {
+          font-size: 18px;
+        }
+
+        @media only screen and (max-width : 992px) {
+          font-size: 16px;
+        }
+
+        @media only screen and (max-width : 768px) {
+          font-size: 16px;
+        }
+
+        @media only screen and (max-width : 480px) {
+          font-size: 14px;
+        }
       }
     }
 
