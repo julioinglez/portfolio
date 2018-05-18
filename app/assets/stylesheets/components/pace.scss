@@ -8,8 +8,8 @@
   z-index: 100;
   background: black;
   opacity: 1;
-  transition: all 1.5s ease-out;
-  transition-delay: 1.3s;
+  transition: all 1.5s ease-in-out;
+  transition-delay: 1.6s;
   overflow: hidden;
 
   &.pace-inactive{
@@ -31,7 +31,6 @@
   &::after{
     content: '';
     position: absolute;
-    // left: 0;
     right: 0;
     margin: 0 auto;
     width: 100%;

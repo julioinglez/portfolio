@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
+//= require scrollify
 //= require_tree .
