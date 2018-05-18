@@ -156,19 +156,21 @@
       height: auto;
       transition: all 0.15s ease-out;
 
-      &:hover{
-        img.project-display-hero-image{
-          &:first-child{
-            left: -30%;
-          }
-        }
-      }
+      // Testing Moving Of Images
+      // &:hover{
+      //   img.project-display-hero-image{
+      //     &:first-child{
+      //       left: -30%;
+      //     }
+      //   }
+      // }
 
       img.project-display-hero-image{
         position: relative;
         width: 100%;
         height: auto;
         align-self: center;
+        left: 0;
         transition: all 0.15s ease-out;
 
         &:first-child{
