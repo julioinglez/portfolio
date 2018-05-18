@@ -125,7 +125,7 @@
 
       label.project-display-label{
         font-size: 20px;
-        color: $fnf-secondary-x-l;
+        color: $fnf-secondary-x-x-x-x-l;
         text-shadow: 1px 1px 2px $gray-x-x-x-d;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -156,11 +156,40 @@
       height: auto;
       transition: all 0.15s ease-out;
 
+      &:hover{
+        img.project-display-hero-image{
+          &:first-child{
+            left: -30%;
+          }
+        }
+      }
+
       img.project-display-hero-image{
         position: relative;
         width: 100%;
         height: auto;
         align-self: center;
+        transition: all 0.15s ease-out;
+
+        &:first-child{
+          z-index: 1;
+        }
+
+        &:last-child{
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: -10%;
+        width: 100%;
+        height: 20px;
+        background: radial-gradient(closest-side, rgba(10,10,10,0.3), rgba(255,0,0,0));
       }
     }
   }

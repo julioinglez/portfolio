@@ -42,6 +42,8 @@ $fnf-secondary: #00a3d8 !default;
 $fnf-secondary-l: lighten($fnf-secondary, 5%) !default;
 $fnf-secondary-x-l: lighten($fnf-secondary, 10%) !default;
 $fnf-secondary-x-x-l: lighten($fnf-secondary, 15%) !default;
+$fnf-secondary-x-x-x-l: lighten($fnf-secondary, 25%) !default;
+$fnf-secondary-x-x-x-x-l: lighten($fnf-secondary, 35%) !default;
 $fnf-secondary-d: darken($fnf-secondary, 5%) !default;
 $fnf-secondary-x-d: darken($fnf-secondary, 10%) !default;
 $fnf-secondary-x-x-d: darken($fnf-secondary, 15%) !default;
