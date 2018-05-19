@@ -4,17 +4,21 @@ $ ->
     sectionName: 'section-name'
     scrollSpeed: 900
     scrollbars: false
-    setHeights: false
+    setHeights: true
     before: ->
       gradient = $('.project-display-gradient')
-      sections = $('.project-display-container')
+      allSections = $('.project-display-container')
       section = $.scrollify.current()
-      sections.removeClass('project-display-active')
-      section.addClass('project-display-active')
+      allSections.removeClass('active')
+      gradient.removeClass('active hatcher formnflow nexus-pattern speedy-vocab')
+      section.addClass('active')
+      section.prev(gradient).addClass('active')
       if section.hasClass('formnflow')
-        gradient.removeClass('hatcher')
         gradient.addClass('formnflow')
       else if section.hasClass('hatcher')
-        gradient.removeClass('formnflow')
         gradient.addClass('hatcher')
+      else if section.hasClass('nexus-pattern')
+        gradient.addClass('nexus-pattern')
+      else if section.hasClass('speedy-vocab')
+        gradient.addClass('speedy-vocab')
   return

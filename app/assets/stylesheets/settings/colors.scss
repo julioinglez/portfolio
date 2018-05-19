@@ -25,6 +25,7 @@ $gray-x-x-x-x-d: #1E1E1E;
 
 // Project Colors
 
+// Formnflow
 $fnf-primary-x-x-d: #2B4468;
 $fnf-primary-x-x-x-x-x-l: lighten($fnf-primary-x-x-d, 66%) !default;
 $fnf-primary-x-x-x-x-l: lighten($fnf-primary-x-x-d, 63%) !default;
@@ -48,3 +49,11 @@ $fnf-secondary-d: darken($fnf-secondary, 5%) !default;
 $fnf-secondary-x-d: darken($fnf-secondary, 10%) !default;
 $fnf-secondary-x-x-d: darken($fnf-secondary, 15%) !default;
 $fnf-secondary-x-x-x-d: darken($fnf-secondary, 18%) !default;
+
+
+// Hatcher
+$hatcher-primary: #513D72;
+$hatcher-primary-d: #422B60;
+$hatcher-primary-x-d: #2F1A4F;
+$hatcher-secondary-l: #EFAEFF;
+$hatcher-secondary: #8E2980;
