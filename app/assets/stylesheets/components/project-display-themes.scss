@@ -27,6 +27,20 @@
     background: linear-gradient(135deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
   }
+
+  &.nexus-pattern{
+    $gradient-start: $nexus-purple-darker;
+    $gradient-middle: $nexus-navy;
+    $gradient-end: $nexus-navy-darker;
+    background: $gradient-end;
+    background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+    background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: linear-gradient(110deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+  }
 }
 
 .project-display-container{
@@ -34,14 +48,19 @@
    label.project-display-label{
     color: $fnf-secondary-x-x-x-x-l;
   }
+
   &.hatcher .project-display .project-display-headings label.project-display-label{
     color: $hatcher-secondary-l;
   }
+
   &.nexus-pattern .project-display .project-display-headings{
     width: 73%;
 
-    label.project-display-label{}
+    label.project-display-label{
+      color: $nexus-orange-lighter;
+    }
   }
+
   &.speedy-vocab .project-display .project-display-headings{
     width: 70%;
 
