@@ -3,8 +3,6 @@ $ ->
     section: '.project-display-container'
     sectionName: 'section-name'
     scrollSpeed: 900
-    scrollbars: false
-    setHeights: true
     before: ->
       gradient = $('.project-display-gradient')
       allSections = $('.project-display-container')

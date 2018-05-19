@@ -1,0 +1,36 @@
+.pace.pace-inactive ~ .project-display-container.welcome{
+  opacity: 1;
+
+  .logo-container{
+    display: flex;
+    top: 0;
+  }
+}
+
+
+.pace{
+  &~ .project-display-container.welcome{
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.2s;
+
+    .logo-container{
+      position: fixed;
+      top: 30%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      height: auto;
+      padding: 50px;
+      z-index: 100;
+      transition: all 0.4s ease-in-out;
+      transition-delay: 1.6s;
+
+      svg.logo-icon{
+        width: 80px;
+        height: 52px;
+      }
+    }
+  }
+}

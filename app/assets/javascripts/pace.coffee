@@ -504,6 +504,7 @@ class ElementTracker
 
   done: ->
     @progress = 100
+    $('.welcome').addClass('loaded')
 
 class DocumentMonitor
   states:
