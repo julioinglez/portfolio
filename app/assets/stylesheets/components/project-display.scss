@@ -119,7 +119,6 @@
     .project-display-headings{
       position: relative;
       width: 50%;
-      text-shadow: 1px 1px 5px $gray-x-x-d;
       transition: all 0.2s ease-out;
 
       padding-right: 30px;
@@ -159,7 +158,6 @@
         position: relative;
         font-size: 20px;
         color: $orange;
-        text-shadow: 1px 1px 2px $gray-x-x-x-d;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         right: 30px;
