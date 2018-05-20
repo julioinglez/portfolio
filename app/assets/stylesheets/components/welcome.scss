@@ -1,36 +1,101 @@
 .pace.pace-inactive ~ .project-display-container.welcome{
-  opacity: 1;
+  // opacity: 1;
 
   .logo-container{
-    display: flex;
-    top: 0;
+    // display: flex;
+    // top: 0;
+
+    svg.logo-icon{
+      opacity: 1;
+    }
+
+    &::after{
+      opacity: 0.4;
+      width: 80%;
+    }
+  }
+
+  .logo-subtitle{
+    opacity: 1;
   }
 }
 
+.project-display-container.welcome{
+
+  .logo-container{
+    svg.logo-icon{
+      opacity: 0;
+    }
+
+    &::after{
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      max-width: 380px;
+      bottom: 23px;
+      content: '';
+      height: 1px;
+      background: $white;
+      opacity: 0;
+      width: 0;
+      transition: all 0.6s ease-out;
+      transition-delay: 0.5s;
+    }
+  }
+
+  .logo-subtitle{
+    opacity: 0;
+  }
+}
 
 .pace{
   &~ .project-display-container.welcome{
-    opacity: 0;
+    opacity: 1;
     transition: all 0.3s ease-out;
     transition-delay: 0.2s;
 
     .logo-container{
-      position: fixed;
-      top: 30%;
+      position: relative;
+      // position: fixed;
+      // top: 30%;
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 100%;
-      height: auto;
       height: auto;
       padding: 50px;
       z-index: 100;
       transition: all 0.4s ease-in-out;
-      transition-delay: 1.6s;
+      // transition-delay: 1.6s;
+      transition-delay: 0.2s;
 
       svg.logo-icon{
         width: 80px;
         height: 52px;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
       }
+    }
+
+    .logo-subtitle{
+      font-family: 'Lato', sans-serif;
+      $gradient-start: $blue;
+      $gradient-middle: $aqua;
+      $gradient-end: $orange;
+      background: $gradient-end;
+      background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+      background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+      background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+      background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+      background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+      background: linear-gradient(29deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      transition: all 0.4s ease-out;
+      transition-delay: 1s;
     }
   }
 }
