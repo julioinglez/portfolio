@@ -10,11 +10,11 @@ defaultOptions =
   # What is the minimum amount of time the bar should be on the
   # screen.  Irrespective of this number, the bar will always be on screen for
   # 33 * (100 / maxProgressPerFrame) + ghostTime ms.
-  minTime: 1800
+  minTime: 0
 
   # What is the minimum amount of time the bar should sit after the last
   # update before disappearing
-  ghostTime: 1000
+  ghostTime: 0
 
   # Its easy for a bunch of the bar to be eaten in the first few frames
   # before we know how much there is to load.  This limits how much of
