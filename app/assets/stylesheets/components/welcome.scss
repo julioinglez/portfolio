@@ -62,12 +62,76 @@
 
     .project-display-map-item{
       position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       font-family: 'Lato', sans-serif;
       font-size: 40px;
       text-transform: uppercase;
       letter-spacing: 1px;
       cursor: pointer;
-      z-index: 100;
+      z-index: 1;
+
+      &.about-me{
+        &::before,
+        &::after{
+          content: 'about me';
+        }
+      }
+
+      &.work{
+        &::before,
+        &::after{
+          content: 'work';
+        }
+      }
+
+      &.contact{
+        &::before,
+        &::after{
+          content: 'contact';
+        }
+      }
+
+      &::before,
+      &::after{
+        content: '';
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      &::before{
+        position: relative;
+        background: $white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &::after{
+        position: absolute;
+        $gradient-start: $blue;
+        $gradient-middle: $aqua;
+        $gradient-end: $orange;
+        background: $gradient-end;
+        background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+        background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        background: linear-gradient(29deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 0;
+      }
+
+      &:hover{
+        &::after{
+          width: 100%;
+        }
+      }
     }
   }
 }

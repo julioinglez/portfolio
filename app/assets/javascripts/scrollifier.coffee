@@ -1,8 +1,11 @@
 $ ->
+  document.location.hash = '#/welcome'
+
   $.scrollify
     section: '.project-display-container'
     sectionName: 'section-name'
     scrollSpeed: 900
+
     before: ->
       logo = $('.logo-icon.contrast')
       gradient = $('.project-display-gradient')
@@ -23,4 +26,3 @@ $ ->
         gradient.addClass('speedy-vocab')
       else if section.hasClass('nexus-pattern')
         gradient.addClass('nexus-pattern')
-  return
