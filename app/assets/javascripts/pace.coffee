@@ -227,6 +227,12 @@ class Bar
     document.body.className = document.body.className.replace 'pace-running', ''
     document.body.className += ' pace-done'
 
+    # Re-enable scrolling after Progress Bar & Animations have finished
+    setTimeout (->
+      $.scrollify.enable();
+      return
+    ), 3000
+
   update: (prog) ->
     @progress = prog
 
@@ -504,7 +510,6 @@ class ElementTracker
 
   done: ->
     @progress = 100
-    $('.welcome').addClass('loaded')
 
 class DocumentMonitor
   states:
