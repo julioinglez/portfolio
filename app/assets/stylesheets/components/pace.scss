@@ -8,14 +8,14 @@
   z-index: 100;
   background: black;
   opacity: 1;
-  transition: all 1.5s ease-in-out;
-  transition-delay: 1.6s;
   overflow: hidden;
 
   &.pace-inactive{
     opacity: 0;
     z-index: -1;
     justify-content: flex-end;
+    transition: all 1.5s ease-in-out;
+    transition-delay: 1.6s;
 
     &::after{
       width: 0;
