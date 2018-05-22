@@ -1,0 +1,163 @@
+$icon-hover-area: 40px;
+$icon-weight: 2px;
+$icon-size: 35px;
+$icon-size-hover: 70px;
+$icon-size-idle: 30px;
+$icon-arrow-size: 12px;
+$icon-arrow-rotation: 55deg;
+$icon-spacing: 16px;
+
+.project-navigation{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width : 768px) {
+    width: 60px;
+  }
+
+  &.idle{
+    .project-navigation-arrow{
+      opacity: 0.1;
+      height: $icon-size-idle;
+      transition: all 0.5s ease-out;
+
+      &.prev,
+      &.next{
+        margin: 0;
+      }
+    }
+  }
+
+  &.last,
+  &.first{
+    .project-navigation-arrow.prev,
+    .project-navigation-arrow.next{
+      margin: 0;
+    }
+  }
+
+  &.last{
+    .project-navigation-arrow.next{
+      opacity: 0;
+      height: 0;
+    }
+  }
+
+  &.first{
+    width: 100%;
+    height: 100px;
+    top: auto;
+    bottom: 10px;
+
+    .project-navigation-arrow.prev{
+      opacity: 0;
+      height: 0;
+    }
+  }
+
+  .project-navigation-arrow{
+    position: relative;
+    width: $icon-hover-area;
+    height: $icon-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover{
+      height: $icon-size-hover;
+      opacity: 1;
+    }
+
+    &.inactive{
+      height: 25px;
+      opacity: 0.15;
+
+      .project-navigation-arrow-icon{
+        &::before,
+        &::after{
+          width: 0;
+        }
+      }
+    }
+
+    .project-navigation-arrow-icon{
+      position: relative;
+      width: $icon-weight;
+      height: 100%;
+      background: $white;
+      cursor: pointer;
+
+      &::before,
+      &::after{
+        content: '';
+        position: absolute;
+        width: $icon-arrow-size;
+        height: $icon-weight;
+        background: $white;
+        border-radius: 50% 0 0 50%;
+        left: 1px;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+    }
+
+    &.prev{
+      margin-bottom: calc(#{$icon-spacing} / 2);
+
+      .project-navigation-arrow-icon{
+        &::before,
+        &::after{
+          top: -1px;
+          transform-origin: 0 50%;
+        }
+
+        &::before{
+          transform: rotate($icon-arrow-rotation);
+          -ms-transform: rotate($icon-arrow-rotation);
+          -webkit-transform: rotate($icon-arrow-rotation);
+        }
+
+        &::after{
+          transform: rotate(calc(-180deg - #{$icon-arrow-rotation}));
+          -ms-transform: rotate(calc(-180deg - #{$icon-arrow-rotation}));
+          -webkit-transform: rotate(calc(-180deg - #{$icon-arrow-rotation}));
+        }
+      }
+    }
+
+    &.next{
+      margin-top: calc(#{$icon-spacing} / 2);
+
+      .project-navigation-arrow-icon{
+        &::before,
+        &::after{
+          bottom: -1px;
+          transform-origin: 0 50%;
+          border-radius: 50% 0 0 50%;
+        }
+
+        &::before{
+          transform: rotate(-$icon-arrow-rotation);
+          -ms-transform: rotate(-$icon-arrow-rotation);
+          -webkit-transform: rotate(-$icon-arrow-rotation);
+        }
+
+        &::after{
+          transform: rotate(calc(180deg + #{$icon-arrow-rotation}));
+          -ms-transform: rotate(calc(180deg + #{$icon-arrow-rotation}));
+          -webkit-transform: rotate(calc(180deg + #{$icon-arrow-rotation}));
+        }
+      }
+    }
+  }
+}

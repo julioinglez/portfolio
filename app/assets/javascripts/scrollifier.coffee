@@ -26,24 +26,34 @@ $ ->
       else if section.hasClass('nexus-pattern')
         gradient.addClass('nexus-pattern')
 
+      # Project Navigation
+      navigation = $('.project-navigation')
+      if section.hasClass('last-child')
+        navigation.addClass('last')
+      else if section.hasClass('first-child')
+        navigation.addClass('first')
+      else
+        navigation.removeClass('last')
+        navigation.removeClass('first')
+
   section = $.scrollify.current()
+  allSections = $('.project-display-container')
+  allSections.first().addClass('first-child')
+  allSections.last().addClass('last-child')
   gradient = $('.project-display-gradient')
   if section.hasClass('welcome')
     gradient.addClass('welcome')
 
-
   document.querySelector('.work').onclick = ->
     $.scrollify.next()
 
-  # Keep browser scrolling disabled until progress bar loads
-
-  # document.location.hash = '#/welcome'
+  # Always take User to top section on page load
   $.scrollify.move(0)
 
   # Disable Scrollify
   $.scrollify.disable();
 
-  # Disable Native Scrolling
+  # Disable browser scrolling until progress bar loads
   keys =
     37: 1
     38: 1
