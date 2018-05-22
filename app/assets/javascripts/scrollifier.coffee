@@ -1,6 +1,4 @@
 $ ->
-  # $('.work')
-
   $.scrollify
     section: '.project-display-container'
     sectionName: 'section-name'
@@ -33,6 +31,9 @@ $ ->
   if section.hasClass('welcome')
     gradient.addClass('welcome')
 
+
+  document.querySelector('.work').onclick = ->
+    $.scrollify.next()
 
   # Keep browser scrolling disabled until progress bar loads
 
