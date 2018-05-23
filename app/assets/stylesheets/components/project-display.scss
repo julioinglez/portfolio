@@ -85,13 +85,20 @@
       }
 
       .project-display-hero{
+        &.hero-thirds{
+          img.project-display-hero-image{
+            &:first-child,
+            &:nth-child(2),
+            &:last-child{
+              left: 0;
+            }
+          }
+        }
+
         img.project-display-hero-image{
           opacity: 1;
 
-          &:first-child{
-            left: 0;
-          }
-
+          &:first-child,
           &:last-child{
             left: 0;
           }
@@ -190,6 +197,33 @@
       width: 100%;
       height: auto;
       transition: all 0.15s ease-out;
+
+      &.hero-thirds{
+        img.project-display-hero-image{
+          &:first-child{
+            left: 90px;
+          }
+
+          &:nth-child(2){
+            position: absolute;
+            top: 0;
+            left: 60px;
+            z-index: 2;
+            transition: all 0.6s ease-out;
+          }
+
+          &:last-child{
+            left: 30px;
+          }
+        }
+
+        &::before{
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+        }
+      }
 
       img.project-display-hero-image{
         position: relative;
