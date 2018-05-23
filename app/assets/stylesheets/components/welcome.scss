@@ -57,20 +57,40 @@
     position: relative;
     width: 80%;
     max-width: 800px;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width : 768px) {
+      flex-direction: column;
+    }
 
     .project-display-map-item{
       position: relative;
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      margin: 20px 0;
       font-family: 'Lato', sans-serif;
       font-size: 40px;
       text-transform: uppercase;
       letter-spacing: 1px;
       cursor: pointer;
       z-index: 1;
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      @media only screen and (max-width : 992px) {
+        font-size: 36px;
+      }
+
+      @media only screen and (max-width : 768px) {
+        font-size: 32px;
+      }
+
+      @media only screen and (max-width : 480px) {
+        font-size: 28px;
+      }
 
       &.about-me{
         &::before,
