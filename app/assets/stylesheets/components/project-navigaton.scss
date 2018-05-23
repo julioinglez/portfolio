@@ -57,9 +57,68 @@ $icon-spacing: 16px;
     top: auto;
     bottom: 10px;
 
-    .project-navigation-arrow.prev{
-      opacity: 0;
-      height: 0;
+    .project-navigation-arrow{
+      &.prev{
+        opacity: 0;
+        height: 0;
+      }
+
+      &:hover{
+        .project-navigation-arrow-icon{
+          .project-navigation-arrow-gradient{
+            opacity: 1;
+            height: 100%;
+          }
+
+          .arrow-icon-head-before,
+          .arrow-icon-head-after{
+            &::after{
+              opacity: 1;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &.idle{
+      .project-navigation-arrow{
+        &.next{
+          @keyframes bounce {
+            0% {
+              top: 0;
+            }
+
+            100% {
+              top: 20px;
+            }
+          }
+
+          animation-name: bounce;
+          animation-duration: 0.6s;
+          animation-iteration-count: infinite;
+          animation-delay: 0.6s;
+          animation-direction: alternate;
+          animation-timing-function: ease-in-out;
+          height: $icon-size;
+          opacity: 1;
+
+          .project-navigation-arrow-icon{
+            .project-navigation-arrow-gradient{
+              opacity: 1;
+              height: 100%;
+            }
+
+            .arrow-icon-head-before,
+            .arrow-icon-head-after{
+              &::after{
+                opacity: 1;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -84,8 +143,8 @@ $icon-spacing: 16px;
       opacity: 0.15;
 
       .project-navigation-arrow-icon{
-        &::before,
-        &::after{
+        .arrow-icon-head-before,
+        .arrow-icon-head-after{
           width: 0;
         }
       }
@@ -98,15 +157,66 @@ $icon-spacing: 16px;
       background: $white;
       cursor: pointer;
 
-      &::before,
-      &::after{
-        content: '';
+      .arrow-icon-head-before,
+      .arrow-icon-head-after{
         position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0;
         width: $icon-arrow-size;
         height: $icon-weight;
         background: $white;
-        border-radius: 50% 0 0 50%;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        &::after{
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          height: 100%;
+          $gradient-start: $blue;
+          $gradient-middle: $blue;
+          $gradient-end: $aqua;
+          background: $gradient-end;
+          background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+          background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+          background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+          background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+          background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+          background: linear-gradient(29deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 85%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+          width: 0;
+          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition-delay: 0.1s;
+        }
+      }
+
+      .arrow-icon-head-before{
+        left: 0.5px;
+      }
+
+      .arrow-icon-head-after{
         left: 1px;
+      }
+
+      .project-navigation-arrow-gradient{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        $gradient-start: $blue;
+        $gradient-middle: $aqua;
+        $gradient-end: $orange;
+        background: $gradient-end;
+        background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+        background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+        background: linear-gradient(50deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 85%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+        height: 0;
         transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
     }
@@ -115,19 +225,19 @@ $icon-spacing: 16px;
       margin-bottom: calc(#{$icon-spacing} / 2);
 
       .project-navigation-arrow-icon{
-        &::before,
-        &::after{
+        .arrow-icon-head-before,
+        .arrow-icon-head-after{
           top: -1px;
           transform-origin: 0 50%;
         }
 
-        &::before{
+        .arrow-icon-head-before{
           transform: rotate($icon-arrow-rotation);
           -ms-transform: rotate($icon-arrow-rotation);
           -webkit-transform: rotate($icon-arrow-rotation);
         }
 
-        &::after{
+        .arrow-icon-head-after{
           transform: rotate(calc(-180deg - #{$icon-arrow-rotation}));
           -ms-transform: rotate(calc(-180deg - #{$icon-arrow-rotation}));
           -webkit-transform: rotate(calc(-180deg - #{$icon-arrow-rotation}));
@@ -139,20 +249,19 @@ $icon-spacing: 16px;
       margin-top: calc(#{$icon-spacing} / 2);
 
       .project-navigation-arrow-icon{
-        &::before,
-        &::after{
+        .arrow-icon-head-before,
+        .arrow-icon-head-after{
           bottom: -1px;
           transform-origin: 0 50%;
-          border-radius: 50% 0 0 50%;
         }
 
-        &::before{
+        .arrow-icon-head-before{
           transform: rotate(-$icon-arrow-rotation);
           -ms-transform: rotate(-$icon-arrow-rotation);
           -webkit-transform: rotate(-$icon-arrow-rotation);
         }
 
-        &::after{
+        .arrow-icon-head-after{
           transform: rotate(calc(180deg + #{$icon-arrow-rotation}));
           -ms-transform: rotate(calc(180deg + #{$icon-arrow-rotation}));
           -webkit-transform: rotate(calc(180deg + #{$icon-arrow-rotation}));
