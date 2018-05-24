@@ -148,6 +148,7 @@ $icon-spacing-mobile: 5px;
 
       @media only screen and (max-width : 768px) {
         padding: 0;
+        transition: padding 0s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 
         .border-left-bottom,
         .border-right-top{
