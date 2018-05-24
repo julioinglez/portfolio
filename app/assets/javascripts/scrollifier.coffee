@@ -52,6 +52,7 @@ $ ->
   # Disable Scrollify & Scrollbar
   $.scrollify.disable();
   document.querySelector('body').className += ' disable-scrollbar'
+  document.querySelector('.project-display-container.welcome').classList.remove 'active'
 
   # Disable browser scrolling until progress bar loads
   keys =
