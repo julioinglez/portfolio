@@ -1,3 +1,16 @@
+$icon-weight: 2px;
+$icon-size: 26px;
+$icon-arrow-size: 10px;
+$icon-arrow-rotation: 48deg;
+$icon-spacing: 10px;
+$icon-spacing-hover: 15px;
+
+// Arrow Icon on Mobile
+$icon-weight-mobile: 1px;
+$icon-size-mobile: 20px;
+$icon-arrow-size-mobile: 8px;
+$icon-spacing-mobile: 5px;
+
 .project-display-view{
   position: relative;
   display: flex;
@@ -5,6 +18,9 @@
   justify-content: flex-start;
   align-items: center;
   white-space: nowrap;
+  right: 20px;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 
   &.desktop{
     @media only screen and (max-width : 560px) {
@@ -26,20 +42,131 @@
   a.project-display-view-link{
     position: relative;
     display: inline-flex;
+    justify-content: flex-start;
     align-items: center;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 20px;
     color: $gray;
+    left: 0;
     opacity: 1;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 0 30px 0 0;
+    height: 60px;
+    transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: padding 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.6s;
+
+    .border-left-bottom,
+    .border-right-top{
+      &::before,
+      &::after{
+        position: absolute;
+        content: '';
+        background: $gray;
+        opacity: 1
+      }
+
+      &::before{
+        width: 2px;
+        height: 0;
+      }
+
+      &::after{
+        height: 2px;
+        width: 0;
+      }
+    }
+
+    .border-left-bottom{
+      &::before{
+        top: 0;
+        left: 0;
+        transition: height 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+      }
+
+      &::after{
+        bottom: 0;
+        left: 0;
+        transition: width 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+      }
+    }
+
+    .border-right-top{
+      &::before{
+        bottom: 0;
+        right: 0;
+        transition: height 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+      }
+
+      &::after{
+        top: 0;
+        right: 0;
+        transition: width 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+      }
+    }
+
+    @media only screen and (max-width : 768px) {
+      padding: 0;
+      height: auto;
+
+      .border-left-bottom,
+      .border-right-top{
+        &::before,
+        &::after{
+          background: none;
+          height: 0;
+          width: 0;
+        }
+      }
+    }
 
     &:hover{
       color: $white;
+      padding-left: 30px;
+      transition: padding 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+
+      .border-left-bottom::before{
+        height: 100%;
+        transition: height 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+      }
+
+      .border-left-bottom::after{
+        width: 100%;
+        transition: width 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+      }
+
+      .border-right-top::before{
+        height: 100%;
+        transition: height 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+      }
+
+      .border-right-top::after{
+        width: 100%;
+        transition: width 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+      }
+
+      @media only screen and (max-width : 768px) {
+        padding: 0;
+
+        .border-left-bottom,
+        .border-right-top{
+          &::before,
+          &::after{
+            background: none;
+            height: 0;
+            width: 0;
+          }
+        }
+      }
 
       .project-display-view-arrow{
         background: $white;
+
+        @media only screen and (max-width : 768px) {
+          width: $icon-size-mobile;
+          margin-left: $icon-spacing-mobile;
+        }
 
         .arrow-icon-head-before,
         .arrow-icon-head-after{
@@ -64,17 +191,6 @@
       font-size: 14px;
     }
 
-    $icon-weight: 2px;
-    $icon-size: 26px;
-    $icon-arrow-size: 10px;
-    $icon-arrow-rotation: 55deg;
-    $icon-spacing: 10px;
-
-    $icon-weight-mobile: 1px;
-    $icon-size-mobile: 20px;
-    $icon-arrow-size-mobile: 8px;
-    $icon-spacing-mobile: 5px;
-
     .project-display-view-arrow{
       position: relative;
       display: flex;
@@ -83,12 +199,13 @@
       cursor: pointer;
       margin-left: $icon-spacing;
       border-radius: 0 2px 2px 0;
-      width: $icon-size;
+      width: 0;
       height: $icon-weight;
       background: $gray;
       cursor: pointer;
       opacity: 1;
-      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0.6s;
 
       @media only screen and (max-width : 768px) {
         height: $icon-weight-mobile;
@@ -101,11 +218,12 @@
         position: absolute;
         margin: 0;
         width: $icon-weight;
-        height: $icon-arrow-size;
+        height: 0;
         background: $gray;
         right: 0;
         transform-origin: 0 50%;
-        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: height 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
 
         @media only screen and (max-width : 768px) {
           width: $icon-weight-mobile;

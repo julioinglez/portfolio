@@ -80,6 +80,29 @@
         }
       }
 
+      $icon-size: 26px;
+      $icon-arrow-size: 10px;
+      $icon-arrow-size-mobile: 8px;
+      .project-display-view{
+        right: 0;
+        opacity: 1;
+
+        .project-display-view-link{
+          .project-display-view-arrow{
+            width: $icon-size;
+
+            .arrow-icon-head-before,
+            .arrow-icon-head-after{
+              height: $icon-arrow-size;
+
+              @media only screen and (max-width : 768px) {
+                height: $icon-arrow-size-mobile;
+              }
+            }
+          }
+        }
+      }
+
       .project-display-hero{
         &.hero-thirds{
           img.project-display-hero-image{
@@ -244,6 +267,7 @@
         height: auto;
         align-self: center;
         opacity: 0.6;
+        pointer-events: none;
 
         &:first-child{
           z-index: 1;
