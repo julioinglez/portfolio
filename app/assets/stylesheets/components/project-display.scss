@@ -66,16 +66,17 @@
 
   &.active{
     .project-display{
-      .project-display-headings{
+      .project-display-info{
+        .project-display-headings{
+          h2.project-display-title{
+            right: 0;
+            opacity: 1;
+          }
 
-        h2.project-display-title{
-          right: 0;
-          opacity: 1;
-        }
-
-        label.project-display-label{
-          right: 0;
-          opacity: 1;
+          label.project-display-label{
+            right: 0;
+            opacity: 1;
+          }
         }
       }
 
@@ -118,69 +119,87 @@
       padding-right: 40px;
     }
 
-    .project-display-headings{
+    .project-display-info{
       position: relative;
+      display: flex;
+      flex-direction: column;
       width: 50%;
+      padding-right: 30px;
       transition: all 0.2s ease-out;
 
-      padding-right: 30px;
-
       @media only screen and (max-width : 768px) {
+        flex-direction: row;
+        align-items: space-between;
+        padding-right: 0;
         margin-bottom: 30px;
         width: 100%;
       }
 
-      h2.project-display-title{
+      .project-display-headings{
         position: relative;
-        letter-spacing: 1px;
-        font-weight: 600;
-        font-size: 50px;
-        white-space: nowrap;
-        right: 40px;
-        transition: all 0.6s ease-out;
-        transition-delay: 0.1s;
-
-        @media only screen and (max-width : 1200px) {
-          font-size: 40px;
-        }
-
-        @media only screen and (max-width : 992px) {
-          font-size: 35px;
-        }
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
 
         @media only screen and (max-width : 768px) {
-          font-size: 35px;
+          margin-bottom: 0;
         }
 
-        @media only screen and (max-width : 480px) {
-          font-size: 25px;
+        h2.project-display-title{
+          position: relative;
+          letter-spacing: 1px;
+          font-weight: 600;
+          font-size: 50px;
+          text-transform: uppercase;
+          white-space: nowrap;
+          right: 40px;
+          margin-bottom: 5px;
+          transition: all 0.6s ease-out;
+          transition-delay: 0.1s;
+
+          @media only screen and (max-width : 1200px) {
+            font-size: 40px;
+          }
+
+          @media only screen and (max-width : 992px) {
+            font-size: 35px;
+          }
+
+          @media only screen and (max-width : 768px) {
+            font-size: 35px;
+          }
+
+          @media only screen and (max-width : 480px) {
+            font-size: 25px;
+          }
         }
-      }
 
-      label.project-display-label{
-        position: relative;
-        font-size: 20px;
-        color: $orange;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        right: 30px;
-        transition: all 0.6s ease-out;
-        transition-delay: 0.1s;
+        label.project-display-label{
+          position: relative;
+          font-size: 20px;
+          color: $orange;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          right: 30px;
+          transition: all 0.6s ease-out;
+          transition-delay: 0.1s;
 
-        @media only screen and (max-width : 1200px) {
-          font-size: 18px;
-        }
+          @media only screen and (max-width : 1200px) {
+            font-size: 18px;
+          }
 
-        @media only screen and (max-width : 992px) {
-          font-size: 16px;
-        }
+          @media only screen and (max-width : 992px) {
+            font-size: 16px;
+          }
 
-        @media only screen and (max-width : 768px) {
-          font-size: 16px;
-        }
+          @media only screen and (max-width : 768px) {
+            font-size: 16px;
+          }
 
-        @media only screen and (max-width : 480px) {
-          font-size: 14px;
+          @media only screen and (max-width : 480px) {
+            font-size: 14px;
+          }
         }
       }
     }

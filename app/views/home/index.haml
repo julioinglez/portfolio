@@ -8,43 +8,12 @@
     %a{class: 'project-display-map-item work'}
     %a{class: 'project-display-map-item contact'}
 
-.project-display-container.formnflow{data: {section_name: "/formnflow"}}
-  .project-display
-    .project-display-headings
-      %h2.project-display-title FORMNFLOW
-      %label.project-display-label UI/UX Design & Front-End Dev
+= render partial: 'home/project-display', locals: {project: 'formnflow', title: 'formnflow', subtitle: 'UI/UX Design & Front-End Dev', display_layout: 'halves'}
 
+= render partial: 'home/project-display', locals: {project: 'hatcher', title: 'hatcher', subtitle: 'UI/UX Design', display_layout: 'thirds'}
 
-    .project-display-hero
-      = image_tag 'formnflow/formnflow-hero-1', class: 'project-display-hero-image'
-      = image_tag 'formnflow/formnflow-hero-2', class: 'project-display-hero-image'
+= render partial: 'home/project-display', locals: {project: 'speedy-vocab', title: 'speedy vocab', subtitle: 'Video Production & Editing', display_layout: 'halves'}
 
-.project-display-container.hatcher{data: {section_name: "/hatcher"}}
-  .project-display
-    .project-display-headings
-      %h2.project-display-title HATCHER
-      %label.project-display-label UI/UX Design
-    .project-display-hero.hero-thirds
-      = image_tag 'hatcher/hatcher-hero-1', class: 'project-display-hero-image'
-      = image_tag 'hatcher/hatcher-hero-2', class: 'project-display-hero-image'
-      = image_tag 'hatcher/hatcher-hero-3', class: 'project-display-hero-image'
-
-.project-display-container.speedy-vocab{data: {section_name: "/speedy-vocab"}}
-  .project-display
-    .project-display-headings
-      %h2.project-display-title SPEEDY VOCAB
-      %label.project-display-label Video Production & Editing
-    .project-display-hero
-      = image_tag 'speedy-vocab/speedy-vocab-hero-1', class: 'project-display-hero-image'
-      = image_tag 'speedy-vocab/speedy-vocab-hero-2', class: 'project-display-hero-image'
-
-.project-display-container.nexus-pattern{data: {section_name: "/nexus-pattern"}}
-  .project-display
-    .project-display-headings
-      %h2.project-display-title NEXUS PATTERN
-      %label.project-display-label UI/UX Design & Front-End Dev
-    .project-display-hero
-      = image_tag 'nexus-pattern/nexus-pattern-hero-1', class: 'project-display-hero-image'
-      = image_tag 'nexus-pattern/nexus-pattern-hero-2', class: 'project-display-hero-image'
+= render partial: 'home/project-display', locals: {project: 'nexus-pattern', title: 'nexus pattern', subtitle: 'UI/UX Design & Front-End Dev', display_layout: 'halves'}
 
 = render partial: 'shared/project-navigation'

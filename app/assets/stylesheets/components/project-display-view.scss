@@ -1,0 +1,131 @@
+.project-display-view{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+
+  &.desktop{
+    @media only screen and (max-width : 600px) {
+      display: none;
+    }
+  }
+
+  &.mobile{
+    display: none;
+    margin-top: 30px;
+
+    @media only screen and (max-width : 600px) {
+      display: flex;
+    }
+  }
+
+  a.project-display-view-link{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    color: $gray;
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover{
+      color: $white;
+
+      .project-display-view-arrow{
+        background: $white;
+
+        .arrow-icon-head-before,
+        .arrow-icon-head-after{
+          background: $white;
+        }
+      }
+    }
+
+    @media only screen and (max-width : 1200px) {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      font-size: 17px;
+    }
+
+    @media only screen and (max-width : 768px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width : 480px) {
+      font-size: 14px;
+    }
+
+    $icon-weight: 2px;
+    $icon-size: 26px;
+    $icon-arrow-size: 10px;
+    $icon-arrow-rotation: 55deg;
+    $icon-spacing: 10px;
+
+    $icon-weight-mobile: 1px;
+    $icon-size-mobile: 20px;
+    $icon-arrow-size-mobile: 8px;
+    $icon-spacing-mobile: 5px;
+
+    .project-display-view-arrow{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: $icon-spacing;
+      border-radius: 0 2px 2px 0;
+      width: $icon-size;
+      height: $icon-weight;
+      background: $gray;
+      cursor: pointer;
+      opacity: 1;
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      @media only screen and (max-width : 768px) {
+        height: $icon-weight-mobile;
+        width: $icon-size-mobile;
+        margin-left: $icon-spacing-mobile;
+      }
+
+      .arrow-icon-head-before,
+      .arrow-icon-head-after{
+        position: absolute;
+        margin: 0;
+        width: $icon-weight;
+        height: $icon-arrow-size;
+        background: $gray;
+        right: 0;
+        transform-origin: 0 50%;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        @media only screen and (max-width : 768px) {
+          width: $icon-weight-mobile;
+          height: $icon-arrow-size-mobile;
+        }
+      }
+
+      .arrow-icon-head-before{
+        bottom: 1px;
+        transform-origin: 50% 100%;
+        transform: rotate(-$icon-arrow-rotation);
+        -ms-transform: rotate(-$icon-arrow-rotation);
+        -webkit-transform: rotate(-$icon-arrow-rotation);
+      }
+
+      .arrow-icon-head-after{
+        top: 1px;
+        transform-origin: 50% 0;
+        transform: rotate($icon-arrow-rotation);
+        -ms-transform: rotate($icon-arrow-rotation);
+        -webkit-transform: rotate($icon-arrow-rotation);
+      }
+    }
+  }
+}

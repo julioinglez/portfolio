@@ -72,24 +72,19 @@
 }
 
 .project-display-container{
-  &.formnflow .project-display .project-display-headings
-   label.project-display-label{
+  &.formnflow .project-display .project-display-info .project-display-headings label.project-display-label{
     color: $fnf-secondary-x-x-x-x-l;
   }
 
-  &.hatcher .project-display .project-display-headings label.project-display-label{
+  &.hatcher .project-display .project-display-info .project-display-headings label.project-display-label{
     color: $hatcher-secondary-l;
   }
 
-  &.nexus-pattern .project-display .project-display-headings{
-    label.project-display-label{
-      color: $nexus-orange-lighter;
-    }
+  &.nexus-pattern .project-display .project-display-info .project-display-headings label.project-display-label{
+    color: $nexus-orange-lighter;
   }
 
-  &.speedy-vocab .project-display .project-display-headings{
-    label.project-display-label{
-      color: $speedy-orange;
-    }
+  &.speedy-vocab .project-display .project-display-info .project-display-headings label.project-display-label{
+    color: $speedy-orange;
   }
 }
