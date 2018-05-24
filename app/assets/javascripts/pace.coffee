@@ -229,6 +229,21 @@ class Bar
 
     # Re-enable scrolling after Progress Bar & Animations have finished
     setTimeout (->
+      preventDefault = (e) ->
+        e = e or window.event
+        if e.preventDefault
+          e.preventDefault()
+        e.returnValue = false
+
+      enableScroll = ->
+        if window.removeEventListener
+          window.removeEventListener 'DOMMouseScroll', preventDefault, false
+        window.onwheel = null
+        document.onmousewheel = null
+        window.ontouchmove = null
+        document.onkeydown = null
+
+      enableScroll()
       $.scrollify.enable();
       document.querySelector('body').classList.remove 'disable-scrollbar'
       return

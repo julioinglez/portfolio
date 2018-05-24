@@ -4,15 +4,17 @@
   .logo-container
     = render partial: 'shared/icons/logo'
   .project-display-map
-    .project-display-map-item.about-me
-    .project-display-map-item.work
-    .project-display-map-item.contact
+    %a{class: 'project-display-map-item about-me'}
+    %a{class: 'project-display-map-item work'}
+    %a{class: 'project-display-map-item contact'}
 
 .project-display-container.formnflow{data: {section_name: "/formnflow"}}
   .project-display
     .project-display-headings
       %h2.project-display-title FORMNFLOW
       %label.project-display-label UI/UX Design & Front-End Dev
+
+
     .project-display-hero
       = image_tag 'formnflow/formnflow-hero-1', class: 'project-display-hero-image'
       = image_tag 'formnflow/formnflow-hero-2', class: 'project-display-hero-image'
