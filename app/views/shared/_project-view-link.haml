@@ -1,4 +1,4 @@
-.project-display-view{class: "#{screen == 'mobile' ? 'mobile' : 'desktop'}"}
+.project-display-view{class: "#{screen == 'mobile' ? 'mobile' : '' || screen == 'desktop' ? 'desktop' : '' }"}
   %a{class: 'project-display-view-link'}
     View Project
     .project-display-view-arrow
