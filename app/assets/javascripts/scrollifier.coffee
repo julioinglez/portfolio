@@ -50,8 +50,9 @@ $ ->
   # Always take User to top section on page load
   $.scrollify.move(0)
 
-  # Disable Scrollify
+  # Disable Scrollify & Scrollbar
   $.scrollify.disable();
+  document.querySelector('body').className += ' disable-scrollbar'
 
   # Disable browser scrolling until progress bar loads
   keys =

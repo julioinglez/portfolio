@@ -230,6 +230,7 @@ class Bar
     # Re-enable scrolling after Progress Bar & Animations have finished
     setTimeout (->
       $.scrollify.enable();
+      document.querySelector('body').classList.remove 'disable-scrollbar'
       return
     ), 3000
 
