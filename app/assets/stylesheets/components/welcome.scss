@@ -103,29 +103,12 @@
 
       &:hover{
         @keyframes perspectiveRotation {
-          0%{
-            transform: perspective(400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-          }
-
-          20%{
-            transform: perspective(400px) rotateX(20deg) rotateY(-5deg) rotateZ(5deg);
-          }
-
-          40%{
-            transform: perspective(400px) rotateX(20deg) rotateY(5deg) rotateZ(-5deg);
-          }
-
-          60%{
-            transform: perspective(400px) rotateX(-20deg) rotateY(-5deg) rotateZ(-5deg);
-          }
-
-          80% {
-            transform: perspective(400px) rotateX(-20deg) rotateY(5deg) rotateZ(5deg);
-          }
-
-          100%{
-            transform: perspective(400px) rotateX(0) rotateY(0);
-          }
+          0%{transform: perspective(400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+          20%{transform: perspective(400px) rotateX(20deg) rotateY(-5deg) rotateZ(5deg);}
+          40%{transform: perspective(400px) rotateX(20deg) rotateY(5deg) rotateZ(-5deg);}
+          60%{transform: perspective(400px) rotateX(-20deg) rotateY(-5deg) rotateZ(-5deg);}
+          80%{transform: perspective(400px) rotateX(-20deg) rotateY(5deg) rotateZ(5deg);}
+          100%{transform: perspective(400px) rotateX(0) rotateY(0);}
         }
 
         animation-name: perspectiveRotation;

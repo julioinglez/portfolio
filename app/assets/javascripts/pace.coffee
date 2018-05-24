@@ -234,10 +234,11 @@ class Bar
       return
     ), 3000
 
+    # Activate (add active class to) Welcome section after page load
     setTimeout (->
       document.querySelector('.project-display-container.welcome').className += ' active'
       return
-    ), 1500
+    ), 1750
 
   update: (prog) ->
     @progress = prog
