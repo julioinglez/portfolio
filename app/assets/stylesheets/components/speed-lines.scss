@@ -1,6 +1,17 @@
 @keyframes speedLines{
-  0%   {top: 0;}
-  100% {top: 100%;}
+  0%   {
+    opacity: 0.2;
+    top: 0;
+  }
+
+  50%{
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0.2;
+    top: 100%;
+  }
 }
 
 .project-display-container.welcome.active{
@@ -9,6 +20,7 @@
 
     .speed-line{
       animation-name: speedLines;
+      animation-duration: 1s;
       animation-iteration-count: infinite;
       animation-direction: normal;
       animation-timing-function: linear;
@@ -57,7 +69,7 @@
   position: absolute;
   display: none;
   width: 50%;
-  height: 200%;
+  height: 180%;
   left: 0;
   right: 0;
   top: 0;
@@ -81,10 +93,11 @@
     right: 0;
     top: 0;
     margin: 0 auto;
-    width: 2px;
+    width: 1px;
     height: 10%;
-    background: $gray-x-x-d;
-    opacity: 0.2;
+    background: $gray-x-x-x-d;
+    opacity: 0.7;
     z-index: 1;
+    border-radius: 100%;
   }
 }
