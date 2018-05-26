@@ -1,43 +1,51 @@
 $ ->
-  # Set timeout idle time
+  # Element & Time Counter Variables
   timoutCount = 10000
   timerTrigger = undefined
-  Interval = undefined
+  interval = undefined
+  navigation = document.querySelector('.project-navigation')
+  arrowPrev = document.querySelector('.project-navigation-arrow.prev')
+  arrowNext = document.querySelector('.project-navigation-arrow.next')
 
+  # Functions
   IdleTrigger = ->
-    $('.project-navigation').addClass('idle')
+    navigation.className += ' idle'
 
   StartTimers = ->
     timerTrigger = setTimeout(IdleTrigger, timoutCount)
 
   ResetTimers = ->
-    $('.project-navigation').removeClass('idle')
+    navigation.classList.remove 'idle'
     clearTimeout timerTrigger
     StartTimers()
 
+  # Begin Timer On Page Load
   StartTimers()
 
+  # Reset Time Counter At Any Browser Interaction
   $(document).bind 'mousemove keypress keydown scroll', ->
     ResetTimers()
 
-  $('.project-navigation-arrow.next, .project-navigation-arrow.prev').on('mouseenter', ->
-    Interval = setInterval(ResetTimers, 3000)
-  ).on 'mouseleave', ->
-    clearInterval(Interval)
-
   # Hover triggers
-  $('.project-navigation-arrow.next').hover (->
-    $(@).prev('.prev').addClass 'inactive'
-  ), ->
-    $(@).prev('.prev').removeClass 'inactive'
+  arrowPrev.onmouseover = ->
+    this.nextElementSibling.className += ' inactive'
+    interval = setInterval(ResetTimers, 3000)
 
-  $('.project-navigation-arrow.prev').hover (->
-    $(@).next('.next').addClass 'inactive'
-  ), ->
-    $(@).next('.next').removeClass 'inactive'
+  arrowPrev.onmouseout = ->
+    this.nextElementSibling.classList.remove 'inactive'
+    clearInterval(interval)
 
-  document.querySelector('.project-navigation-arrow.next').onclick = ->
-    $.scrollify.next()
+  arrowNext.onmouseover = ->
+    this.previousElementSibling.className += ' inactive'
+    interval = setInterval(ResetTimers, 3000)
 
-  document.querySelector('.project-navigation-arrow.prev').onclick = ->
+  arrowNext.onmouseout = ->
+    this.previousElementSibling.classList.remove 'inactive'
+    clearInterval(interval)
+
+  # Click triggers
+  arrowPrev.onclick = ->
     $.scrollify.previous()
+
+  arrowNext.onclick = ->
+    $.scrollify.next()

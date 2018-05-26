@@ -1,13 +1,14 @@
 $ ->
+  logo = $('.logo-icon.contrast')
+  gradient = $('.project-display-gradient')
+  allSections = $('.project-display-container')
+
   $.scrollify
     section: '.project-display-container'
     sectionName: 'section-name'
     scrollSpeed: 900
 
     before: ->
-      logo = $('.logo-icon.contrast')
-      gradient = $('.project-display-gradient')
-      allSections = $('.project-display-container')
       section = $.scrollify.current()
       allSections.removeClass('active')
       gradient.removeClass('welcome hatcher formnflow nexus-pattern speedy-vocab')
@@ -36,10 +37,8 @@ $ ->
         navigation.removeClass('first')
 
   section = $.scrollify.current()
-  allSections = $('.project-display-container')
   allSections.first().addClass('first-child')
   allSections.last().addClass('last-child')
-  gradient = $('.project-display-gradient')
   if section.hasClass('welcome')
     gradient.addClass('welcome')
 
