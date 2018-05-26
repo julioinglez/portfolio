@@ -2,6 +2,7 @@ $ ->
   logo = $('.logo-icon.contrast')
   gradient = $('.project-display-gradient')
   allSections = $('.project-display-container')
+  navigation = $('.project-navigation')
 
   $.scrollify
     section: '.project-display-container'
@@ -36,13 +37,20 @@ $ ->
         navigation.removeClass('last')
         navigation.removeClass('first')
 
+      # WIP
+      $('.project-display-view-link').click ->
+        allSections.hide()
+        section.show()
+        section.addClass('showcase')
+        navigation.addClass('showcase')
+        $.scrollify.disable()
+
   section = $.scrollify.current()
   allSections.first().addClass('first-child')
   allSections.last().addClass('last-child')
-  if section.hasClass('welcome')
-    gradient.addClass('welcome')
 
-  document.querySelector('.work').onclick = ->
+  # Click triggers
+  document.querySelector('.project-display-map-item.work').onclick = ->
     $.scrollify.next()
 
   # Always take User to top section on page load
@@ -54,11 +62,7 @@ $ ->
   document.querySelector('.project-display-container.welcome').classList.remove 'active'
 
   # Disable browser scrolling until progress bar loads
-  keys =
-    37: 1
-    38: 1
-    39: 1
-    40: 1
+  keys = 37: 1, 38: 1, 39: 1, 40: 1
 
   preventDefault = (e) ->
     e = e or window.event
@@ -75,11 +79,8 @@ $ ->
     if window.addEventListener
       window.addEventListener 'DOMMouseScroll', preventDefault, false
     window.onwheel = preventDefault
-    # modern standard
     document.onmousewheel = preventDefault
-    # older browsers, IE
     window.ontouchmove = preventDefault
-    # mobile
     document.onkeydown = preventDefaultForScrollKeys
 
   disableScroll()

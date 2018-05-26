@@ -1,0 +1,126 @@
+.project-display-gradient{
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.6s ease-out;
+
+  // Default Gradient Background
+  $gradient-start: $black-l;
+  $gradient-middle: $black-x-l;
+  $gradient-end: $black-l;
+  background: $gradient-end;
+  background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+  background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+  background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+  background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+  background: linear-gradient(135deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 200%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: none;
+    transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    transition: all 0.15 ease-out;
+
+    @media only screen and (max-width : 1200px) {
+      width: 60%;
+    }
+
+    @media only screen and (max-width : 992px) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width : 768px) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width : 480px) {
+      width: 90%;
+    }
+  }
+
+  &::before{
+    background: linear-gradient(250deg, rgba(255,0,0,0), rgba(255,255,255,0.04), rgba(255,255,255,0));
+  }
+
+  &::after{
+    left: -30%;
+    background: linear-gradient(80deg, rgba(255,0,0,0), rgba(255,255,255,0.04), rgba(255,255,255,0));
+  }
+
+
+  // Gradient Customisations For Project Themes
+  &.formnflow{
+    $gradient-start: $fnf-secondary-x-x-d;
+    $gradient-middle: $fnf-primary-x-x-x-d;
+    $gradient-end: $fnf-primary-x-x-x-x-x-d;
+    background: $fnf-primary-x-x-x-x-x-d;
+    background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+    background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: linear-gradient(135deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+  }
+
+  &.hatcher{
+    $gradient-start: $hatcher-secondary;
+    $gradient-middle: $hatcher-primary-d;
+    $gradient-end: $hatcher-primary-x-d;
+    background: $gradient-end;
+    background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+    background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: linear-gradient(135deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+  }
+
+  &.nexus-pattern{
+    $gradient-start: $nexus-purple-darker;
+    $gradient-middle: $nexus-navy;
+    $gradient-end: $nexus-navy-darker;
+    background: $gradient-end;
+    background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+    background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    background: linear-gradient(110deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+  }
+
+  &.speedy-vocab{
+    $gradient-start: $speedy-secondary;
+    $gradient-middle: $speedy-primary;
+    $gradient-end: $speedy-primary-darker;
+    background: $gradient-end;
+    background: -moz-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 6%, $gradient-middle 55%, $gradient-end 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, $gradient-start), color-stop(14%, $gradient-start), color-stop(55%, $gradient-middle), color-stop(100%, $gradient-end));
+    background: -webkit-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 6%, $gradient-middle 55%, $gradient-end 100%);
+    background: -o-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 6%, $gradient-middle 55%, $gradient-end 100%);
+    background: -ms-linear-gradient(-45deg, $gradient-start 0%, $gradient-start 6%, $gradient-middle 55%, $gradient-end 100%);
+    background: linear-gradient(135deg, $gradient-start 0%, $gradient-start 12%, $gradient-middle 40%, $gradient-end 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
+  }
+}

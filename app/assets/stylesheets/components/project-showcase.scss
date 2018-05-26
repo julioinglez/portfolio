@@ -1,0 +1,10 @@
+.project-display-container{
+  .project-showcase{
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+
+    border: solid red 1px;
+    z-index: 1;
+  }
+}
