@@ -14,6 +14,4 @@
 
     = render partial: 'shared/project-view-link', locals: {screen: 'mobile'}
 
-  .project-showcase
-    .project-showcase-description
-      An intuitive 
+  = render partial: "home/project-showcase-#{project}"

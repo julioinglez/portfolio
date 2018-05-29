@@ -51,5 +51,13 @@
     opacity: 0;
     height: 0;
     z-index: 1;
+
+    .project-showcase-description{
+      position: relative;
+      font-size: 22px;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
   }
 }

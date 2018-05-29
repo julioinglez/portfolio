@@ -23,7 +23,7 @@ $ ->
   StartTimers()
 
   # Reset Time Counter At Any Browser Interaction
-  $(document).bind 'mousemove keypress keydown scroll', ->
+  $(document).bind 'mousemove keydown scroll', ->
     ResetTimers()
 
   # Hover triggers
