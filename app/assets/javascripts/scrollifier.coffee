@@ -39,11 +39,17 @@ $ ->
 
       # WIP
       $('.project-display-view-link').click ->
-        allSections.hide()
-        section.show()
+        allSections.not('.active').hide()
         section.addClass('showcase')
         navigation.addClass('showcase')
         $.scrollify.disable()
+
+  projectDrill = ->
+    allSections.hide()
+    section.show()
+    section.addClass('showcase')
+    navigation.addClass('showcase')
+    $.scrollify.disable()
 
   section = $.scrollify.current()
   allSections.first().addClass('first-child')

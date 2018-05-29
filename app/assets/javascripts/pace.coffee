@@ -227,6 +227,9 @@ class Bar
     document.body.className = document.body.className.replace 'pace-running', ''
     document.body.className += ' pace-done'
 
+    activateWelcome = ->
+      document.querySelector('.project-display-container.welcome').className += ' active'
+
     # Re-enable scrolling after Progress Bar & Animations have finished
     setTimeout (->
       preventDefault = (e) ->
@@ -251,7 +254,7 @@ class Bar
 
     # Activate (add active class to) Welcome section after page load
     setTimeout (->
-      document.querySelector('.project-display-container.welcome').className += ' active'
+      activateWelcome()
       return
     ), 1750
 
