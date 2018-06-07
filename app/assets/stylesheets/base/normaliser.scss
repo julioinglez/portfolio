@@ -19,3 +19,18 @@ p{
 a{
   cursor: pointer;
 }
+
+img{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+hr{
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
