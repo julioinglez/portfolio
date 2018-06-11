@@ -2,10 +2,10 @@
   .project-showcase-description
     %p An intuitive and neat looking Form Builder designed to cover a wide range of use cases.
     %p My role in this project was to improve the UI, UX and Front-end of the platform.
-    %p Formnflow is a Hashbang product that I helped build with both my Design & Front-end skills.
+    %p Formnflow is a Hashbang Ltd product that I helped build with both my Design & Front-end skills.
 
   %p.project-showcase-resources
-    Ruby on Rails, HTML5, CSS3, Javascript & jQuery, Adobe Illustrator and Adobe Photoshop
+    Ruby on Rails, HAML, SASS, Coffeescript (Javascript & jQuery), Adobe Illustrator and Adobe Photoshop
 
   .project-showcase-images-container
     .project-showcase-image
@@ -19,8 +19,28 @@
     %h3.project-showcase-section-title
       the challenge
     %p.project-showcase-section-description
-      When starting the project, Formnflow was already on a functional state, so my focus went into the UX/UI and polishing the current visual in place.
-      A big part of the work went into clarifying the main workflow for the user to avoid any confusion regarding each userflow step.
+      My focus went into improving the interface's UI, optimising the current UX in place and polishing any other visuals in place to bring visual consistency to the app.
+      I translated the existing functionality into a more clear experience for the user to avoid any possible confusion throughout the workflow.
+      The biggest challenge in this project was working solo, without the assistance of a back-end developer, which turned out to be a great learning opportunity.
+
+  .project-showcase-images-container
+    .project-showcase-image
+      = image_tag "formnflow/formnflow-showcase-3.svg", class: 'project-display-hero-image'
+    .project-showcase-image
+      = image_tag "formnflow/formnflow-showcase-4.svg", class: 'project-display-hero-image'
+
+  %hr
+
+  .project-showcase-section
+    %h3.project-showcase-section-title
+      Project Highlight
+    %p.project-showcase-section-description
+      As one of my very favourte design tasks, I am very proud and happy to have created a custom library of icons for Formnflow.
+      All icons have been very carefully designed as vectors with plenty of consideration into the visual consistency and functional expressiveness of the app.
+
+  = render partial: "home/project-showcase-icons-grid"
+
+
 -#
 -# THE BEGINNING:
 -#

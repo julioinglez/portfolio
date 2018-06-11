@@ -1,0 +1,147 @@
+.project-showcase-icons-grid{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 60px;
+
+  .icons-grid-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: solid $fnf-primary-x-x-l 3px;
+    border-radius: 4px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    svg{
+      width: 50px;
+      height: auto;
+      fill: white;
+    }
+
+    .home-icon{
+      width: 35px;
+    }
+
+    .form-icon{
+      width: 30px;
+    }
+
+    .archive-icon{
+      width: 33px;
+    }
+
+    .form-variations-icon{
+      width: 55px;
+    }
+
+    .section-icon{
+      width: 28px;
+    }
+
+    .field-icon{
+      width: 32px;
+    }
+
+    .section-import-icon{
+      width: 30px;
+    }
+
+    .field-import-icon{
+      width: 32px;
+    }
+
+    .edit-icon{
+      width: 40px;
+    }
+
+    .undo-icon{
+      width: 40px;
+    }
+
+    .copy-icon{
+      width: 36px;
+    }
+
+    .redirect-icon{
+      width: 24px;
+    }
+
+    .delete-icon{
+      width: 36px;
+    }
+
+    .collapse-icon{
+      width: 38px;
+    }
+
+    .checkbox-icon{
+      width: 24px;
+    }
+
+    .radiobutton-icon{
+      width: 22px;
+    }
+
+    .selectbox-icon{
+      width: 28px;
+    }
+
+    .yes-no-icon{
+      width: 48px;
+    }
+
+    .oneline-icon{
+      width: 34px;
+    }
+
+    .paragraph-icon{
+      width: 34px;
+    }
+
+    .fileupload-icon{
+      width: 20px;
+    }
+
+    .monetary-icon{
+      width: 46px;
+    }
+
+    .numbers-icon{
+      width: 80px;
+    }
+
+    .address-icon{
+      width: 24px;
+    }
+
+    .label-icon{
+      width: 32px;
+    }
+
+    .popup-icon{
+      width: 30px;
+    }
+
+    .budget-icon{
+      width: 32px;
+    }
+
+    .advbudget-icon{
+      width: 32px;
+    }
+
+    .down-arrow-icon{
+      width: 26px;
+    }
+
+    .up-down-arrow-icon{
+      width: 30px;
+    }
+  }
+}
