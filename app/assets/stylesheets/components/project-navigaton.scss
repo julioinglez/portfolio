@@ -131,12 +131,12 @@ $icon-spacing: 16px;
     .project-navigation-arrow{
       .project-navigation-arrow-icon{
         height: 0;
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+        transition: all 0.4s $easeOutQuart 0.2s;
 
         .arrow-icon-head-before,
         .arrow-icon-head-after{
           width: 0;
-          transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 0.4s $easeOutQuart;
         }
       }
     }
@@ -151,7 +151,7 @@ $icon-spacing: 16px;
     justify-content: center;
     cursor: pointer;
     opacity: 0.5;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s $easeOutQuart;
 
     &:hover{
       height: $icon-size-hover;
@@ -184,7 +184,7 @@ $icon-spacing: 16px;
         width: $icon-arrow-size;
         height: $icon-weight;
         background: $white;
-        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.3s $easeOutQuart;
 
         &::after{
           content: '';
@@ -206,7 +206,7 @@ $icon-spacing: 16px;
           background: linear-gradient(29deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 85%);
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
           width: 0;
-          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 0.6s $easeOutQuart;
           transition-delay: 0.1s;
         }
       }
@@ -254,7 +254,7 @@ $icon-spacing: 16px;
         background: linear-gradient(50deg, $gradient-start 0%, $gradient-start 14%, $gradient-middle 55%, $gradient-end 85%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-start', endColorstr='$gradient-end', GradientType=1);
         height: 0;
-        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.3s $easeOutQuart;
       }
     }
 
