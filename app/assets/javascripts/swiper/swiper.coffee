@@ -4,6 +4,8 @@ $(document).ready ->
     slidesPerView: 1
     mousewheel: true
     keyboard: true
-    hashNavigation: true
+    hashNavigation:
+      watchState: true
+      replaceState: true
     loop: true
   )

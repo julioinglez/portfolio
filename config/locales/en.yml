@@ -1,18 +1,21 @@
 en:
-  project_display:
-    formnflow:
-      hash: formnflow
-      title: Formnflow
-      subtitle: UI/UX Design & Front-End Dev
-    hatcher:
-      hash: hatcher
-      title: Hatcher
-      subtitle: UI/UX Design
-    speedy_vocab:
-      hash: speedy-vocab
-      title: Speedy Vocab
-      subtitle: Video Production & Editing
-    nexus_pattern:
-      hash: nexus-pattern
-      title: Nexus Pattern
-      subtitle: UI/UX Design & Front-End Dev
+  home:
+    index:
+      welcome:
+        hash: welcome
+      formnflow:
+        hash: formnflow
+        title: Formnflow
+        subtitle: UI/UX Design & Front-End Dev
+      hatcher:
+        hash: hatcher
+        title: Hatcher
+        subtitle: UI/UX Design
+      speedy_vocab:
+        hash: speedy-vocab
+        title: Speedy Vocab
+        subtitle: Video Production & Editing
+      nexus_pattern:
+        hash: nexus-pattern
+        title: Nexus Pattern
+        subtitle: UI/UX Design & Front-End Dev
