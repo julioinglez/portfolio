@@ -1,4 +1,4 @@
-.swiper-slide.project-display-container{class: "#{project} active", data: {section_name: "/#{project}"}}
+.swiper-slide.project-display-container{class: "#{project}", data: {section_name: "/#{project}"}}
   .project-display
     .project-display-info
       .project-display-headings
@@ -13,5 +13,3 @@
         = image_tag "#{project}/#{project}-hero-3", class: 'project-display-hero-image'
 
     = render partial: 'shared/project-view-link', locals: {screen: 'mobile'}
-
-  -# = render partial: "home/project-showcase-#{project}"

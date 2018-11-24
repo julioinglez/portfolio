@@ -1,12 +1,5 @@
 .project-display-container{
-  position: relative;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
 
   &.first-child{
     justify-content: center;
@@ -21,8 +14,6 @@
     width: 80%;
     max-width: 1200px;
     z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
 
     @media only screen and (max-width : 768px) {
       flex-direction: column;
