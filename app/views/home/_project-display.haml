@@ -1,4 +1,4 @@
-.project-display-container{class: project, data: {section_name: "/#{project}"}}
+.project-display-container.swiper-slide{class: "#{project} active", data: {section_name: "/#{project}"}}
   .project-display
     .project-display-info
       .project-display-headings
@@ -14,4 +14,4 @@
 
     = render partial: 'shared/project-view-link', locals: {screen: 'mobile'}
 
-  = render partial: "home/project-showcase-#{project}"
+  -# = render partial: "home/project-showcase-#{project}"

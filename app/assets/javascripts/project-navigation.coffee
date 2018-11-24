@@ -1,4 +1,4 @@
-$ ->
+$('.page-wrapper.home').ready ->
   # Element & Time Counter Variables
   timoutCount = 10000
   timerTrigger = undefined

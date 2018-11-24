@@ -1,4 +1,5 @@
-.pace.pace-inactive ~ .project-display-container.welcome{
+// .pace.pace-inactive ~ .project-display-container.welcome{}
+.project-display-container.welcome{
   .logo-container{
     display: flex;
     top: 0;
@@ -34,7 +35,7 @@
 .project-display-container.welcome{
   .logo-container{
     position: fixed;
-    top: 30%;
+    // top: 30%;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -85,7 +86,7 @@
     @media only screen and (max-width : 768px) {
       flex-direction: column;
     }
-    
+
     .project-display-map-item{
       position: relative;
       display: flex;

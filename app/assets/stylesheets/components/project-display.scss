@@ -2,11 +2,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+
+  border: solid red 1px;
 
   &.first-child{
     justify-content: center;
