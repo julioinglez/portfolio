@@ -1,7 +1,7 @@
 .swiper-container
   .project-display-gradient
-  .swiper-wrapper{class: "#{controller_name}"}
-    .swiper-slide.project-display-container.welcome
+  .swiper-wrapper
+    .swiper-slide.project-display-container.welcome{data: {hash: controller_name}}
       .project-display-map
         %a{class: 'project-display-map-item about-me'}
         %a{class: 'project-display-map-item work'}
