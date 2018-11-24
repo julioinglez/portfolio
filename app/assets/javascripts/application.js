@@ -16,5 +16,6 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require swiper
+//= require swiper/swiper.min
+//= require swiper/swiper
 //= require_tree .

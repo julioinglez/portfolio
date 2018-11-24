@@ -1,32 +1,20 @@
--# .swiper-container
--#   .page-wrapper.swiper-wrapper{class: "#{controller_name}"}
--#     .project-display-gradient
--#     .project-display-container.welcome.swiper-slide.active{data: {section_name: "/welcome"}}
--#       = render partial: 'shared/speed-lines'
--#       .logo-container
--#         = render partial: 'shared/icons/logo'
--#       .project-display-map
--#         %a{class: 'project-display-map-item about-me'}
--#         %a{class: 'project-display-map-item work'}
--#         %a{class: 'project-display-map-item contact'}
--#
--#     = render partial: 'home/project-display', locals: {project: t('project_display.formnflow.hash'), title: t('project_display.formnflow.title'), subtitle: t('project_display.formnflow.subtitle'), display_layout: 'halves'}
--#
--#     = render partial: 'home/project-display', locals: {project: t('project_display.hatcher.hash'), title: t('project_display.hatcher.title'), subtitle: t('project_display.hatcher.subtitle'), display_layout: 'thirds'}
--#
--#     = render partial: 'home/project-display', locals: {project: t('project_display.speedy_vocab.hash'), title: t('project_display.speedy_vocab.title'), subtitle: t('project_display.speedy_vocab.subtitle'), display_layout: 'halves'}
--#
--#     = render partial: 'home/project-display', locals: {project: t('project_display.nexus_pattern.hash'), title: t('project_display.nexus_pattern.title'), subtitle: t('project_display.nexus_pattern.subtitle'), display_layout: 'halves'}
--#
--#     = render partial: 'shared/project-navigation'
-
 .swiper-container
-  .swiper-wrapper
-    .swiper-slide
-      hello 1
-    .swiper-slide
-      hello 2
-    .swiper-slide
-      hello 3
-    .swiper-slide
-      hello 4
+  .swiper-wrapper.page-wrapper{class: "#{controller_name}"}
+    .project-display-gradient
+    .swiper-slide.project-display-container.welcome.active{data: {section_name: "/welcome"}}
+      .logo-container
+        = render partial: 'shared/icons/logo'
+      .project-display-map
+        %a{class: 'project-display-map-item about-me'}
+        %a{class: 'project-display-map-item work'}
+        %a{class: 'project-display-map-item contact'}
+
+    = render partial: 'home/project-display', locals: {project: t('project_display.formnflow.hash'), title: t('project_display.formnflow.title'), subtitle: t('project_display.formnflow.subtitle'), display_layout: 'halves'}
+
+    = render partial: 'home/project-display', locals: {project: t('project_display.hatcher.hash'), title: t('project_display.hatcher.title'), subtitle: t('project_display.hatcher.subtitle'), display_layout: 'thirds'}
+
+    = render partial: 'home/project-display', locals: {project: t('project_display.speedy_vocab.hash'), title: t('project_display.speedy_vocab.title'), subtitle: t('project_display.speedy_vocab.subtitle'), display_layout: 'halves'}
+
+    = render partial: 'home/project-display', locals: {project: t('project_display.nexus_pattern.hash'), title: t('project_display.nexus_pattern.title'), subtitle: t('project_display.nexus_pattern.subtitle'), display_layout: 'halves'}
+
+    = render partial: 'shared/project-navigation'
