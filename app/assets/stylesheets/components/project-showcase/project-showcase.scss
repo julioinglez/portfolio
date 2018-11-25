@@ -1,63 +1,49 @@
-// TODO: Sort Out Animation Pacing
+.project-showcase-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
-.project-display-container{
-  &.active{
-    &.showcase{
-      height: auto !important;
-
-      .project-display{
-        top: 0;
-        transform: translateY(0);
-        transition: all 0.6s $easeOutQuart 0.3s;
-
-        .project-display-info{
-          .project-display-headings{
-            .project-display-title{
-              padding-top: 60px;
-              transition: padding 0.6s $easeOutQuart 0.3s;
-            }
-          }
-        }
-
-        .project-display-hero{
-          img.project-display-hero-image,
-          &::before{
-            height: 0;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s $easeOutQuart, height 0.3s $easeOutQuart;
-          }
-        }
-
-        .project-display-link{
-          a.project-display-link-item{
-            height: 0;
-            opacity: 0;
-            transition: opacity 0.3s $easeOutQuart, height 0.3s $easeOutQuart 0.6s;
-          }
-        }
-      }
-
-      .project-showcase{
-        height: auto;
-        opacity: 1;
-        display: block;
-        transition: opacity 0.3s $easeOutQuart 1s, height 0.3s $easeOutQuart;
-      }
-    }
-  }
+  padding-top: 100px;
+  padding-bottom: 200px;
 
   .project-showcase{
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 80%;
     max-width: 1200px;
-    opacity: 0;
-    display: none;
-    height: 0;
     z-index: 1;
 
-    // TEMPORARY TO ADD CONTENT
-    padding-bottom: 200px;
+    .project-showcase-headings{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      .project-showcase-title{
+        position: relative;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 50px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        margin-bottom: 5px;
+        transition: all 0.6s ease-out;
+        transition-delay: 0.1s;
+      }
+
+      .project-showcase-subtitle{
+        position: relative;
+        font-size: 20px;
+        color: $fnf-secondary-x-x-x-x-l;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: all 0.6s ease-out;
+        transition-delay: 0.1s;
+      }
+    }
 
     .project-showcase-description{
       position: relative;
@@ -185,6 +171,64 @@
         text-align: justify;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.project-display-container{
+  &.active{
+    &.showcase{
+      height: auto !important;
+
+      .project-display{
+        top: 0;
+        transform: translateY(0);
+        transition: all 0.6s $easeOutQuart 0.3s;
+
+        .project-display-info{
+          .project-display-headings{
+            .project-display-title{
+              padding-top: 60px;
+              transition: padding 0.6s $easeOutQuart 0.3s;
+            }
+          }
+        }
+
+        .project-display-hero{
+          img.project-display-hero-image,
+          &::before{
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s $easeOutQuart, height 0.3s $easeOutQuart;
+          }
+        }
+
+        .project-display-link{
+          a.project-display-link-item{
+            height: 0;
+            opacity: 0;
+            transition: opacity 0.3s $easeOutQuart, height 0.3s $easeOutQuart 0.6s;
+          }
+        }
+      }
+
+      .project-showcase{
+        height: auto;
+        opacity: 1;
+        display: block;
+        transition: opacity 0.3s $easeOutQuart 1s, height 0.3s $easeOutQuart;
       }
     }
   }

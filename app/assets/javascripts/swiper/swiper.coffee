@@ -2,7 +2,7 @@ $(document).ready ->
 
   # Setup Swiper
   swiper = new Swiper('.swiper-container',
-    # init: false
+    init: false
     direction: 'vertical'
     slidesPerView: 1
     mousewheel: true
@@ -15,6 +15,10 @@ $(document).ready ->
       nextEl: '.swipe-next'
       prevEl: '.swipe-prev'
   )
+
+  # Only Run Swiper On Home Page
+  $('body.home').ready ->
+    swiper.init()
 
   # Target Navigation Arrows
   nextArrow = $('.navigation-arrow.next')
