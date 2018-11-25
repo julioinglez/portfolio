@@ -1,13 +1,12 @@
 .logo-container{
   position: fixed;
-  top: 5%;
   display: flex;
   justify-content: center;
+  top: 5%;
   width: 100%;
-  height: auto;
-  padding: 50px;
-  z-index: 100;
-  transition: top 0.6s ease-in-out;
+  height: 46px;
+  z-index: 2;
+  transition: all 0.6s $easeOutQuart;
   transition-delay: 1.6s;
 
   @media only screen and (max-width : 768px) {
@@ -15,45 +14,21 @@
   }
 
   svg.logo-icon{
-    position: absolute;
-    top: 0;
+    position: relative;
     width: 80px;
     height: auto;
-    opacity: 0;
-    transition: all 0.6s $easeOutQuart;
+    transition: all 0.5s $easeOutQuart;
 
     @media only screen and (max-width : 768px) {
       width: 60px;
     }
+  }
 
-    &.contrast{
-      opacity: 0;
-
-      &.active{
-        opacity: 1;
-      }
-
+  &.white{
+    svg.logo-icon{
       path, polygon{
         fill: $white;
       }
     }
   }
-
-  // Need to sort out the coloured logo for first section only
-  // .logo-container{
-  //   display: flex;
-  //   top: 0;
-  //
-  //   svg.logo-icon{
-  //     opacity: 1;
-  //
-  //     &.contrast{
-  //       opacity: 0;
-  //
-  //       &.active{
-  //         opacity: 1;
-  //       }
-  //     }
-  //   }
-  // }
 }

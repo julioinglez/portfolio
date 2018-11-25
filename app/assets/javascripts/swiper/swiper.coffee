@@ -38,16 +38,19 @@ $(document).ready ->
     nextArrow.removeClass('active')
     prevArrow.removeClass('active')
 
-  # Gradient Background Colour Transition
   slides = 'welcome formnflow hatcher nexus-pattern speedy-vocab'
   grandient = $('.dynamic-gradient')
+  logo = $('.logo-container')
   swiper.on 'slideChangeTransitionStart', ->
+
+    # Gradient Background Colour Transition
     hash = $('.swiper-slide-active').data('hash')
     grandient.removeClass(slides)
     grandient.addClass(hash)
 
-
-$(document).bind 'init', ->
-  # default 30px
-  console.log 'leaniii'
-  $.event.special.swipe.verticalDistanceThreshold = '1150'
+    # Logo Colour Transition
+    logoClass = 'white'
+    if hash != 'welcome'
+      logo.addClass(logoClass)
+    else
+      logo.removeClass(logoClass)
