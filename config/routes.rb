@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'home/index', to: "home#index", as: :home 
+  get 'home/index', to: "home#index", as: :home
   root 'home#index'
+
+  get 'formnflow', to: 'formnflow#show'
+  get 'hatcher', to: 'hatcher#show'
+  get 'nexus_pattern', to: 'nexus_pattern#show'
+  get 'speedy_vocab', to: 'speedy_vocab#show'
 end

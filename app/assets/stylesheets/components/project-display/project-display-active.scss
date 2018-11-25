@@ -1,5 +1,5 @@
 .project-display-container{
-  &.active{
+  &.swiper-slide-active{
     .project-display{
       .project-display-info{
         .project-display-headings{
@@ -18,12 +18,12 @@
       $icon-size: 26px;
       $icon-arrow-size: 10px;
       $icon-arrow-size-mobile: 8px;
-      .project-display-view{
+      .project-display-link{
         right: 0;
         opacity: 1;
 
-        .project-display-view-link{
-          .project-display-view-arrow{
+        .project-display-link-item{
+          .project-display-link-arrow{
             width: $icon-size;
 
             .arrow-icon-head-before,
