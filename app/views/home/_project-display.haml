@@ -1,16 +1,17 @@
-.swiper-slide.project-display-container{class: project, data: {hash: project}}
-  - if project == 'welcome'
-    .project-display-map
-      %a{class: 'project-display-map-item about-me'}
-      %a{class: 'project-display-map-item work'}
-      %a{class: 'project-display-map-item contact'}
-  - else
+- if project == 'welcome'
+  .welcome-display-container.swiper-slide{class: project, data: {hash: project}}
+    .welcome-display
+      %a{class: 'welcome-display-link about-me'}
+      %a{class: 'welcome-display-link work'}
+      %a{class: 'welcome-display-link contact'}
+- else
+  .project-display-container.swiper-slide{class: project, data: {hash: project}}
     .project-display
       .project-display-info
         .project-display-headings
           %h2.project-display-title= title
           %label.project-display-label= subtitle
-        = render partial: 'shared/project-view-link', locals: {screen: 'desktop'}
+        = render partial: 'shared/project-link', locals: {screen: 'desktop'}
 
       .project-display-hero{class: "#{display_layout == 'thirds' ? 'hero-thirds' : ''}"}
         = image_tag "#{project}/#{project}-hero-1", class: 'project-display-hero-image'
@@ -18,4 +19,4 @@
         - if display_layout == 'thirds'
           = image_tag "#{project}/#{project}-hero-3", class: 'project-display-hero-image'
 
-      = render partial: 'shared/project-view-link', locals: {screen: 'mobile'}
+      = render partial: 'shared/project-link', locals: {screen: 'mobile'}

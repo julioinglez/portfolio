@@ -3,9 +3,9 @@
 #   timoutCount = 10000
 #   timerTrigger = undefined
 #   interval = undefined
-#   navigation = document.querySelector('.project-navigation')
-#   arrowPrev = document.querySelector('.project-navigation-arrow.prev')
-#   arrowNext = document.querySelector('.project-navigation-arrow.next')
+#   navigation = document.querySelector('.navigation')
+#   arrowPrev = document.querySelector('.navigation-arrow.prev')
+#   arrowNext = document.querySelector('.navigation-arrow.next')
 #
 #   # Functions
 #   IdleTrigger = ->

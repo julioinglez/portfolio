@@ -1,6 +1,11 @@
+// 1. Load variables and general normalising preferences
+@import "settings/**/*";
+
+// 2. Load libraries and plug-ins
 @import "swiper/*";
-@import "settings/*";
-@import "base/*";
+
+// 3. Load general page layouts
 @import "layout/*";
-@import "components/*";
-@import "states/*";
+
+// 4. Load components
+@import "components/**/*";

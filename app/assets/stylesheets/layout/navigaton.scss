@@ -7,7 +7,7 @@ $icon-arrow-size: 12px;
 $icon-arrow-rotation: 55deg;
 $icon-spacing: 16px;
 
-.project-navigation{
+.navigation{
   position: fixed;
   top: 0;
   right: 0;
@@ -24,7 +24,7 @@ $icon-spacing: 16px;
   }
 
   &.idle{
-    .project-navigation-arrow{
+    .navigation-arrow{
       opacity: 0.1;
       height: $icon-size-idle;
       transition: all 0.5s ease-out;
@@ -38,14 +38,14 @@ $icon-spacing: 16px;
 
   &.last,
   &.first{
-    .project-navigation-arrow.prev,
-    .project-navigation-arrow.next{
+    .navigation-arrow.prev,
+    .navigation-arrow.next{
       margin: 0;
     }
   }
 
   &.last{
-    .project-navigation-arrow.next{
+    .navigation-arrow.next{
       opacity: 0;
       height: 0;
     }
@@ -62,15 +62,15 @@ $icon-spacing: 16px;
       bottom: 20px;
     }
 
-    .project-navigation-arrow{
+    .navigation-arrow{
       &.prev{
         opacity: 0;
         height: 0;
       }
 
       &:hover{
-        .project-navigation-arrow-icon{
-          .project-navigation-arrow-gradient{
+        .navigation-arrow-icon{
+          .navigation-arrow-gradient{
             opacity: 1;
             height: 100%;
           }
@@ -87,7 +87,7 @@ $icon-spacing: 16px;
     }
 
     &.idle{
-      .project-navigation-arrow{
+      .navigation-arrow{
         &.next{
           @keyframes bounce {
             0% {
@@ -108,8 +108,8 @@ $icon-spacing: 16px;
           height: $icon-size;
           opacity: 1;
 
-          .project-navigation-arrow-icon{
-            .project-navigation-arrow-gradient{
+          .navigation-arrow-icon{
+            .navigation-arrow-gradient{
               opacity: 1;
               height: 100%;
             }
@@ -128,8 +128,8 @@ $icon-spacing: 16px;
   }
 
   &.showcase{
-    .project-navigation-arrow{
-      .project-navigation-arrow-icon{
+    .navigation-arrow{
+      .navigation-arrow-icon{
         height: 0;
         transition: all 0.4s $easeOutQuart 0.2s;
 
@@ -142,7 +142,7 @@ $icon-spacing: 16px;
     }
   }
 
-  .project-navigation-arrow{
+  .navigation-arrow{
     position: relative;
     width: $icon-hover-area;
     height: $icon-size;
@@ -162,7 +162,7 @@ $icon-spacing: 16px;
       height: 25px;
       opacity: 0.15;
 
-      .project-navigation-arrow-icon{
+      .navigation-arrow-icon{
         .arrow-icon-head-before,
         .arrow-icon-head-after{
           width: 0;
@@ -170,7 +170,7 @@ $icon-spacing: 16px;
       }
     }
 
-    .project-navigation-arrow-icon{
+    .navigation-arrow-icon{
       position: relative;
       width: $icon-weight;
       height: 100%;
@@ -237,7 +237,7 @@ $icon-spacing: 16px;
         }
       }
 
-      .project-navigation-arrow-gradient{
+      .navigation-arrow-gradient{
         position: absolute;
         width: 100%;
         height: 100%;
@@ -261,7 +261,7 @@ $icon-spacing: 16px;
     &.prev{
       margin-bottom: calc(#{$icon-spacing} / 2);
 
-      .project-navigation-arrow-icon{
+      .navigation-arrow-icon{
         border-radius: 2px 2px 0 0;
 
         .arrow-icon-head-before,
@@ -289,7 +289,7 @@ $icon-spacing: 16px;
     &.next{
       margin-top: calc(#{$icon-spacing} / 2);
 
-      .project-navigation-arrow-icon{
+      .navigation-arrow-icon{
         border-radius: 0 0 2px 2px;
 
         .arrow-icon-head-before,

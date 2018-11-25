@@ -1,8 +1,8 @@
 # $('.page-wrapper.home').ready ->
 #   logo = $('.logo-icon.contrast')
-#   gradient = $('.project-display-gradient')
+#   gradient = $('.dynamic-gradient')
 #   allSections = $('.project-display-container')
-#   navigation = $('.project-navigation')
+#   navigation = $('.navigation')
 #
 #   $.scrollify
 #     section: '.project-display-container'
@@ -28,7 +28,7 @@
 #         gradient.addClass('nexus-pattern')
 #
 #       # Project Navigation
-#       navigation = $('.project-navigation')
+#       navigation = $('.navigation')
 #       if section.hasClass('last-child')
 #         navigation.addClass('last')
 #       else if section.hasClass('first-child')

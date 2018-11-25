@@ -29,8 +29,8 @@
           }
         }
 
-        .project-display-view{
-          a.project-display-view-link{
+        .project-display-link{
+          a.project-display-link-item{
             height: 0;
             opacity: 0;
             transition: opacity 0.3s $easeOutQuart, height 0.3s $easeOutQuart 0.6s;

@@ -11,7 +11,7 @@ $icon-size-mobile: 20px;
 $icon-arrow-size-mobile: 8px;
 $icon-spacing-mobile: 5px;
 
-.project-display-view{
+.project-display-link{
   position: relative;
   display: flex;
   flex-direction: row;
@@ -39,7 +39,7 @@ $icon-spacing-mobile: 5px;
     }
   }
 
-  a.project-display-view-link{
+  a.project-display-link-item{
     position: relative;
     display: inline-flex;
     justify-content: flex-start;
@@ -162,7 +162,7 @@ $icon-spacing-mobile: 5px;
         }
       }
 
-      .project-display-view-arrow{
+      .project-display-link-arrow{
         background: $white;
 
         @media only screen and (max-width : 768px) {
@@ -193,7 +193,7 @@ $icon-spacing-mobile: 5px;
       font-size: 14px;
     }
 
-    .project-display-view-arrow{
+    .project-display-link-arrow{
       position: relative;
       display: flex;
       align-items: center;
