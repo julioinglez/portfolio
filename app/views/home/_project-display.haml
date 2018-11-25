@@ -1,9 +1,9 @@
 - if project == 'welcome'
   .welcome-display-container.swiper-slide{class: project, data: {hash: project}}
     .welcome-display
-      %a{class: 'welcome-display-link about-me'}
-      %a{class: 'welcome-display-link work'}
-      %a{class: 'welcome-display-link contact'}
+      = link_to '', 'javascript:void(0)', class: 'welcome-display-link about-me'
+      = link_to '', 'javascript:void(0)', class: 'welcome-display-link work swipe-next'
+      = link_to '', 'javascript:void(0)', class: 'welcome-display-link contact'
 - else
   .project-display-container.swiper-slide{class: project, data: {hash: project}}
     .project-display

@@ -2,6 +2,7 @@ $(document).ready ->
 
   # Setup Swiper
   swiper = new Swiper('.swiper-container',
+    # init: false
     direction: 'vertical'
     slidesPerView: 1
     mousewheel: true
@@ -11,10 +12,9 @@ $(document).ready ->
       replaceState: true
     loop: true
     navigation:
-      nextEl: '.navigation-arrow.next'
-      prevEl: '.navigation-arrow.prev'
+      nextEl: '.swipe-next'
+      prevEl: '.swipe-prev'
   )
-
 
   # Target Navigation Arrows
   nextArrow = $('.navigation-arrow.next')
