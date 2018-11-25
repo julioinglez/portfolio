@@ -127,21 +127,6 @@ $icon-spacing: 16px;
     }
   }
 
-  &.showcase{
-    .navigation-arrow{
-      .navigation-arrow-icon{
-        height: 0;
-        transition: all 0.4s $easeOutQuart 0.2s;
-
-        .arrow-icon-head-before,
-        .arrow-icon-head-after{
-          width: 0;
-          transition: all 0.4s $easeOutQuart;
-        }
-      }
-    }
-  }
-
   .navigation-arrow{
     position: relative;
     width: $icon-hover-area;
@@ -153,9 +138,14 @@ $icon-spacing: 16px;
     opacity: 0.5;
     transition: all 0.3s $easeOutQuart;
 
-    &:hover{
+    &:hover,
+    &.active{
       height: $icon-size-hover;
       opacity: 1;
+    }
+
+    &.active{
+      transition: all 0.15s ease-out;
     }
 
     &.inactive{
