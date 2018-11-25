@@ -7,6 +7,7 @@ $(document).ready ->
     slidesPerView: 1
     mousewheel: true
     keyboard: true
+    threshold: 15
     hashNavigation:
       watchState: true
       replaceState: true
@@ -44,3 +45,9 @@ $(document).ready ->
     hash = $('.swiper-slide-active').data('hash')
     grandient.removeClass(slides)
     grandient.addClass(hash)
+
+
+$(document).bind 'init', ->
+  # default 30px
+  console.log 'leaniii'
+  $.event.special.swipe.verticalDistanceThreshold = '1150'
