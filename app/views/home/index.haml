@@ -1,10 +1,10 @@
-.swiper-container
-  .swiper-wrapper
-    = render partial: 'home/project-display', locals: {project: t('.welcome.hash')}
-    = render partial: 'home/project-display', locals: {project: t('.formnflow.hash'), title: t('.formnflow.title'), subtitle: t('.formnflow.subtitle'), display_layout: 'halves'}
-    = render partial: 'home/project-display', locals: {project: t('.hatcher.hash'), title: t('.hatcher.title'), subtitle: t('.hatcher.subtitle'), display_layout: 'thirds'}
-    = render partial: 'home/project-display', locals: {project: t('.speedy_vocab.hash'), title: t('.speedy_vocab.title'), subtitle: t('.speedy_vocab.subtitle'), display_layout: 'halves'}
-    = render partial: 'home/project-display', locals: {project: t('.nexus_pattern.hash'), title: t('.nexus_pattern.title'), subtitle: t('.nexus_pattern.subtitle'), display_layout: 'halves'}
-
-  = render partial: 'shared/icons/logo'
-  = render partial: 'shared/navigation'
+.barba-container{data: {namespace: 'home'}}
+  .swiper-container.home
+    .swiper-wrapper
+      = render partial: 'home/project-display', locals: {project: t('.welcome.hash')}
+      = render partial: 'home/project-display', locals: {project: t('.formnflow.hash'), title: t('.formnflow.title'), subtitle: t('.formnflow.subtitle'), display_layout: 'halves'}
+      = render partial: 'home/project-display', locals: {project: t('.hatcher.hash'), title: t('.hatcher.title'), subtitle: t('.hatcher.subtitle'), display_layout: 'thirds'}
+      = render partial: 'home/project-display', locals: {project: t('.speedy_vocab.hash'), title: t('.speedy_vocab.title'), subtitle: t('.speedy_vocab.subtitle'), display_layout: 'halves'}
+      = render partial: 'home/project-display', locals: {project: t('.nexus_pattern.hash'), title: t('.nexus_pattern.title'), subtitle: t('.nexus_pattern.subtitle'), display_layout: 'halves'}
+    
+    = render partial: 'shared/navigation'

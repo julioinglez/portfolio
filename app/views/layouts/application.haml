@@ -9,8 +9,9 @@
     = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body{class: controller_name}
+  %body
     .dynamic-gradient
     #barba-wrapper
-      .barba-container
-        = yield
+      = yield
+
+    = render partial: 'shared/icons/logo'
